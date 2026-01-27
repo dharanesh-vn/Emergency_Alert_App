@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#000000</color>
+    <color name="colorAccent">#FF5252</color>
+    <color name="colorPrimary">#D32F2F</color>
+    <color name="colorPrimaryDark">#B71C1C</color>
+    <color name="white">#FFFFFF</color>
+    <string name="app_name">Emergency Alert</string>
+    <string name="call_emergency">Call Emergency</string>
+    <string name="emergency_mode">Emergency Mode</string>
+    <string name="sos">SOS</string>
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">#D32F2F</item>
+        <item name="colorPrimaryDark">#B71C1C</item>
+        <item name="colorAccent">#FF5252</item>
+    </style>
+</resources>

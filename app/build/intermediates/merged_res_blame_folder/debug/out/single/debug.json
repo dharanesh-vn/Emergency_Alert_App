@@ -1,0 +1,38 @@
+[
+    {
+        "merged": "com.emergency.alert.app-merged_res-34:/layout_activity_emergency_contacts.xml.flat",
+        "source": "com.emergency.alert.app-main-36:/layout/activity_emergency_contacts.xml"
+    },
+    {
+        "merged": "com.emergency.alert.app-merged_res-34:/layout_activity_calculator.xml.flat",
+        "source": "com.emergency.alert.app-main-36:/layout/activity_calculator.xml"
+    },
+    {
+        "merged": "com.emergency.alert.app-merged_res-34:/layout_activity_profile.xml.flat",
+        "source": "com.emergency.alert.app-main-36:/layout/activity_profile.xml"
+    },
+    {
+        "merged": "com.emergency.alert.app-merged_res-34:/layout_activity_safety_tips.xml.flat",
+        "source": "com.emergency.alert.app-main-36:/layout/activity_safety_tips.xml"
+    },
+    {
+        "merged": "com.emergency.alert.app-merged_res-34:/layout_activity_image_editor.xml.flat",
+        "source": "com.emergency.alert.app-main-36:/layout/activity_image_editor.xml"
+    },
+    {
+        "merged": "com.emergency.alert.app-merged_res-34:/layout_activity_webview.xml.flat",
+        "source": "com.emergency.alert.app-main-36:/layout/activity_webview.xml"
+    },
+    {
+        "merged": "com.emergency.alert.app-merged_res-34:/layout_activity_login.xml.flat",
+        "source": "com.emergency.alert.app-main-36:/layout/activity_login.xml"
+    },
+    {
+        "merged": "com.emergency.alert.app-merged_res-34:/xml_file_paths.xml.flat",
+        "source": "com.emergency.alert.app-main-36:/xml/file_paths.xml"
+    },
+    {
+        "merged": "com.emergency.alert.app-merged_res-34:/layout_activity_main.xml.flat",
+        "source": "com.emergency.alert.app-main-36:/layout/activity_main.xml"
+    }
+]

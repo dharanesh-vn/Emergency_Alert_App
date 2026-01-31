@@ -72,7 +72,7 @@
 39-->[androidx.core:core:1.9.0] C:\Users\dhara\.gradle\caches\9.1.0\transforms\066c12c00859d02386bf97d2cf6432de\workspace\transformed\core-1.9.0\AndroidManifest.xml:26:22-94
 40
 41    <application
-41-->C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:16:5-64:19
+41-->C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:16:5-66:19
 42        android:allowBackup="true"
 42-->C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:17:9-35
 43        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
@@ -119,143 +119,149 @@
 63-->C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:35:9-56
 63-->C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:35:19-54
 64
-65        <!-- ✅ ADD THIS ONE LINE - Database Test Activity -->
+65        <!-- ✅ ADD THESE TWO LINES -->
 66        <activity
-66-->C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:38:9-39:49
-67            android:name="com.emergency.alert.DatabaseTestActivity"
-67-->C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:38:19-55
-68            android:label="Database Inspector" />
-68-->C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:39:13-47
-69
-70        <service
-70-->C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:41:9-44:39
-71            android:name="com.emergency.alert.LocationTrackingService"
-71-->C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:42:13-52
-72            android:exported="false"
-72-->C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:44:13-37
-73            android:foregroundServiceType="location" />
-73-->C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:43:13-53
-74        <service
-74-->C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:46:9-48:39
-75            android:name="com.emergency.alert.MediaService"
-75-->C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:47:13-41
-76            android:exported="false" />
-76-->C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:48:13-37
-77
-78        <receiver
-78-->C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:50:9-52:39
-79            android:name="com.emergency.alert.GeofenceBroadcastReceiver"
-79-->C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:51:13-54
-80            android:exported="false" />
-80-->C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:52:13-37
-81
-82        <provider
-82-->C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:54:9-62:20
-83            android:name="androidx.core.content.FileProvider"
-83-->C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:55:13-62
-84            android:authorities="com.emergency.alert.fileprovider"
-84-->C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:56:13-67
-85            android:exported="false"
-85-->C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:57:13-37
-86            android:grantUriPermissions="true" >
-86-->C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:58:13-47
-87            <meta-data
-87-->C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:59:13-61:53
-88                android:name="android.support.FILE_PROVIDER_PATHS"
-88-->C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:60:17-67
-89                android:resource="@xml/file_paths" />
-89-->C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:61:17-51
-90        </provider>
-91
-92        <!-- Needs to be explicitly declared on P+ -->
-93        <uses-library
-93-->[com.google.android.gms:play-services-maps:18.2.0] C:\Users\dhara\.gradle\caches\9.1.0\transforms\b5726a481e3e7856bed03e737b3d0e5e\workspace\transformed\jetified-play-services-maps-18.2.0\AndroidManifest.xml:39:9-41:40
-94            android:name="org.apache.http.legacy"
-94-->[com.google.android.gms:play-services-maps:18.2.0] C:\Users\dhara\.gradle\caches\9.1.0\transforms\b5726a481e3e7856bed03e737b3d0e5e\workspace\transformed\jetified-play-services-maps-18.2.0\AndroidManifest.xml:40:13-50
-95            android:required="false" />
-95-->[com.google.android.gms:play-services-maps:18.2.0] C:\Users\dhara\.gradle\caches\9.1.0\transforms\b5726a481e3e7856bed03e737b3d0e5e\workspace\transformed\jetified-play-services-maps-18.2.0\AndroidManifest.xml:41:13-37
-96
-97        <activity
-97-->[com.google.android.gms:play-services-base:18.1.0] C:\Users\dhara\.gradle\caches\9.1.0\transforms\8174df9cdcf9a5676edae327067cbb8b\workspace\transformed\jetified-play-services-base-18.1.0\AndroidManifest.xml:20:9-22:45
-98            android:name="com.google.android.gms.common.api.GoogleApiActivity"
-98-->[com.google.android.gms:play-services-base:18.1.0] C:\Users\dhara\.gradle\caches\9.1.0\transforms\8174df9cdcf9a5676edae327067cbb8b\workspace\transformed\jetified-play-services-base-18.1.0\AndroidManifest.xml:20:19-85
-99            android:exported="false"
-99-->[com.google.android.gms:play-services-base:18.1.0] C:\Users\dhara\.gradle\caches\9.1.0\transforms\8174df9cdcf9a5676edae327067cbb8b\workspace\transformed\jetified-play-services-base-18.1.0\AndroidManifest.xml:22:19-43
-100            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-100-->[com.google.android.gms:play-services-base:18.1.0] C:\Users\dhara\.gradle\caches\9.1.0\transforms\8174df9cdcf9a5676edae327067cbb8b\workspace\transformed\jetified-play-services-base-18.1.0\AndroidManifest.xml:21:19-78
-101
-102        <meta-data
-102-->[com.google.android.gms:play-services-basement:18.1.0] C:\Users\dhara\.gradle\caches\9.1.0\transforms\c5913f75772c2cdaa9d566e9bb6ac3f3\workspace\transformed\jetified-play-services-basement-18.1.0\AndroidManifest.xml:21:9-23:69
-103            android:name="com.google.android.gms.version"
-103-->[com.google.android.gms:play-services-basement:18.1.0] C:\Users\dhara\.gradle\caches\9.1.0\transforms\c5913f75772c2cdaa9d566e9bb6ac3f3\workspace\transformed\jetified-play-services-basement-18.1.0\AndroidManifest.xml:22:13-58
-104            android:value="@integer/google_play_services_version" />
-104-->[com.google.android.gms:play-services-basement:18.1.0] C:\Users\dhara\.gradle\caches\9.1.0\transforms\c5913f75772c2cdaa9d566e9bb6ac3f3\workspace\transformed\jetified-play-services-basement-18.1.0\AndroidManifest.xml:23:13-66
-105
-106        <provider
-106-->[androidx.emoji2:emoji2:1.2.0] C:\Users\dhara\.gradle\caches\9.1.0\transforms\ced4c93479dcdd44b0e3012515f91336\workspace\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
-107            android:name="androidx.startup.InitializationProvider"
-107-->[androidx.emoji2:emoji2:1.2.0] C:\Users\dhara\.gradle\caches\9.1.0\transforms\ced4c93479dcdd44b0e3012515f91336\workspace\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:25:13-67
-108            android:authorities="com.emergency.alert.androidx-startup"
-108-->[androidx.emoji2:emoji2:1.2.0] C:\Users\dhara\.gradle\caches\9.1.0\transforms\ced4c93479dcdd44b0e3012515f91336\workspace\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:26:13-68
-109            android:exported="false" >
-109-->[androidx.emoji2:emoji2:1.2.0] C:\Users\dhara\.gradle\caches\9.1.0\transforms\ced4c93479dcdd44b0e3012515f91336\workspace\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:27:13-37
-110            <meta-data
-110-->[androidx.emoji2:emoji2:1.2.0] C:\Users\dhara\.gradle\caches\9.1.0\transforms\ced4c93479dcdd44b0e3012515f91336\workspace\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
-111                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-111-->[androidx.emoji2:emoji2:1.2.0] C:\Users\dhara\.gradle\caches\9.1.0\transforms\ced4c93479dcdd44b0e3012515f91336\workspace\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:30:17-75
-112                android:value="androidx.startup" />
-112-->[androidx.emoji2:emoji2:1.2.0] C:\Users\dhara\.gradle\caches\9.1.0\transforms\ced4c93479dcdd44b0e3012515f91336\workspace\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:31:17-49
+66-->C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:38:9-39:42
+67            android:name="com.emergency.alert.SafetyTipsActivity"
+67-->C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:38:19-53
+68            android:label="Safety Tips" />
+68-->C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:39:13-40
+69        <activity
+69-->C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:40:9-41:49
+70            android:name="com.emergency.alert.DatabaseTestActivity"
+70-->C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:40:19-55
+71            android:label="Database Inspector" />
+71-->C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:41:13-47
+72
+73        <service
+73-->C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:43:9-46:39
+74            android:name="com.emergency.alert.LocationTrackingService"
+74-->C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:44:13-52
+75            android:exported="false"
+75-->C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:46:13-37
+76            android:foregroundServiceType="location" />
+76-->C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:45:13-53
+77        <service
+77-->C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:48:9-50:39
+78            android:name="com.emergency.alert.MediaService"
+78-->C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:49:13-41
+79            android:exported="false" />
+79-->C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:50:13-37
+80
+81        <receiver
+81-->C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:52:9-54:39
+82            android:name="com.emergency.alert.GeofenceBroadcastReceiver"
+82-->C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:53:13-54
+83            android:exported="false" />
+83-->C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:54:13-37
+84
+85        <provider
+85-->C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:56:9-64:20
+86            android:name="androidx.core.content.FileProvider"
+86-->C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:57:13-62
+87            android:authorities="com.emergency.alert.fileprovider"
+87-->C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:58:13-67
+88            android:exported="false"
+88-->C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:59:13-37
+89            android:grantUriPermissions="true" >
+89-->C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:60:13-47
+90            <meta-data
+90-->C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:61:13-63:53
+91                android:name="android.support.FILE_PROVIDER_PATHS"
+91-->C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:62:17-67
+92                android:resource="@xml/file_paths" />
+92-->C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:63:17-51
+93        </provider>
+94
+95        <!-- Needs to be explicitly declared on P+ -->
+96        <uses-library
+96-->[com.google.android.gms:play-services-maps:18.2.0] C:\Users\dhara\.gradle\caches\9.1.0\transforms\b5726a481e3e7856bed03e737b3d0e5e\workspace\transformed\jetified-play-services-maps-18.2.0\AndroidManifest.xml:39:9-41:40
+97            android:name="org.apache.http.legacy"
+97-->[com.google.android.gms:play-services-maps:18.2.0] C:\Users\dhara\.gradle\caches\9.1.0\transforms\b5726a481e3e7856bed03e737b3d0e5e\workspace\transformed\jetified-play-services-maps-18.2.0\AndroidManifest.xml:40:13-50
+98            android:required="false" />
+98-->[com.google.android.gms:play-services-maps:18.2.0] C:\Users\dhara\.gradle\caches\9.1.0\transforms\b5726a481e3e7856bed03e737b3d0e5e\workspace\transformed\jetified-play-services-maps-18.2.0\AndroidManifest.xml:41:13-37
+99
+100        <activity
+100-->[com.google.android.gms:play-services-base:18.1.0] C:\Users\dhara\.gradle\caches\9.1.0\transforms\8174df9cdcf9a5676edae327067cbb8b\workspace\transformed\jetified-play-services-base-18.1.0\AndroidManifest.xml:20:9-22:45
+101            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+101-->[com.google.android.gms:play-services-base:18.1.0] C:\Users\dhara\.gradle\caches\9.1.0\transforms\8174df9cdcf9a5676edae327067cbb8b\workspace\transformed\jetified-play-services-base-18.1.0\AndroidManifest.xml:20:19-85
+102            android:exported="false"
+102-->[com.google.android.gms:play-services-base:18.1.0] C:\Users\dhara\.gradle\caches\9.1.0\transforms\8174df9cdcf9a5676edae327067cbb8b\workspace\transformed\jetified-play-services-base-18.1.0\AndroidManifest.xml:22:19-43
+103            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+103-->[com.google.android.gms:play-services-base:18.1.0] C:\Users\dhara\.gradle\caches\9.1.0\transforms\8174df9cdcf9a5676edae327067cbb8b\workspace\transformed\jetified-play-services-base-18.1.0\AndroidManifest.xml:21:19-78
+104
+105        <meta-data
+105-->[com.google.android.gms:play-services-basement:18.1.0] C:\Users\dhara\.gradle\caches\9.1.0\transforms\c5913f75772c2cdaa9d566e9bb6ac3f3\workspace\transformed\jetified-play-services-basement-18.1.0\AndroidManifest.xml:21:9-23:69
+106            android:name="com.google.android.gms.version"
+106-->[com.google.android.gms:play-services-basement:18.1.0] C:\Users\dhara\.gradle\caches\9.1.0\transforms\c5913f75772c2cdaa9d566e9bb6ac3f3\workspace\transformed\jetified-play-services-basement-18.1.0\AndroidManifest.xml:22:13-58
+107            android:value="@integer/google_play_services_version" />
+107-->[com.google.android.gms:play-services-basement:18.1.0] C:\Users\dhara\.gradle\caches\9.1.0\transforms\c5913f75772c2cdaa9d566e9bb6ac3f3\workspace\transformed\jetified-play-services-basement-18.1.0\AndroidManifest.xml:23:13-66
+108
+109        <provider
+109-->[androidx.emoji2:emoji2:1.2.0] C:\Users\dhara\.gradle\caches\9.1.0\transforms\ced4c93479dcdd44b0e3012515f91336\workspace\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
+110            android:name="androidx.startup.InitializationProvider"
+110-->[androidx.emoji2:emoji2:1.2.0] C:\Users\dhara\.gradle\caches\9.1.0\transforms\ced4c93479dcdd44b0e3012515f91336\workspace\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:25:13-67
+111            android:authorities="com.emergency.alert.androidx-startup"
+111-->[androidx.emoji2:emoji2:1.2.0] C:\Users\dhara\.gradle\caches\9.1.0\transforms\ced4c93479dcdd44b0e3012515f91336\workspace\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:26:13-68
+112            android:exported="false" >
+112-->[androidx.emoji2:emoji2:1.2.0] C:\Users\dhara\.gradle\caches\9.1.0\transforms\ced4c93479dcdd44b0e3012515f91336\workspace\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:27:13-37
 113            <meta-data
-113-->[androidx.lifecycle:lifecycle-process:2.6.1] C:\Users\dhara\.gradle\caches\9.1.0\transforms\81f28284e83fd14ffad73994df85338f\workspace\transformed\jetified-lifecycle-process-2.6.1\AndroidManifest.xml:29:13-31:52
-114                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-114-->[androidx.lifecycle:lifecycle-process:2.6.1] C:\Users\dhara\.gradle\caches\9.1.0\transforms\81f28284e83fd14ffad73994df85338f\workspace\transformed\jetified-lifecycle-process-2.6.1\AndroidManifest.xml:30:17-78
+113-->[androidx.emoji2:emoji2:1.2.0] C:\Users\dhara\.gradle\caches\9.1.0\transforms\ced4c93479dcdd44b0e3012515f91336\workspace\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
+114                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+114-->[androidx.emoji2:emoji2:1.2.0] C:\Users\dhara\.gradle\caches\9.1.0\transforms\ced4c93479dcdd44b0e3012515f91336\workspace\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:30:17-75
 115                android:value="androidx.startup" />
-115-->[androidx.lifecycle:lifecycle-process:2.6.1] C:\Users\dhara\.gradle\caches\9.1.0\transforms\81f28284e83fd14ffad73994df85338f\workspace\transformed\jetified-lifecycle-process-2.6.1\AndroidManifest.xml:31:17-49
+115-->[androidx.emoji2:emoji2:1.2.0] C:\Users\dhara\.gradle\caches\9.1.0\transforms\ced4c93479dcdd44b0e3012515f91336\workspace\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:31:17-49
 116            <meta-data
-116-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\dhara\.gradle\caches\9.1.0\transforms\c2b1c181493b2d43f31db17f1956c070\workspace\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:29:13-31:52
-117                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
-117-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\dhara\.gradle\caches\9.1.0\transforms\c2b1c181493b2d43f31db17f1956c070\workspace\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:30:17-85
+116-->[androidx.lifecycle:lifecycle-process:2.6.1] C:\Users\dhara\.gradle\caches\9.1.0\transforms\81f28284e83fd14ffad73994df85338f\workspace\transformed\jetified-lifecycle-process-2.6.1\AndroidManifest.xml:29:13-31:52
+117                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+117-->[androidx.lifecycle:lifecycle-process:2.6.1] C:\Users\dhara\.gradle\caches\9.1.0\transforms\81f28284e83fd14ffad73994df85338f\workspace\transformed\jetified-lifecycle-process-2.6.1\AndroidManifest.xml:30:17-78
 118                android:value="androidx.startup" />
-118-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\dhara\.gradle\caches\9.1.0\transforms\c2b1c181493b2d43f31db17f1956c070\workspace\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:31:17-49
-119        </provider>
-120
-121        <receiver
-121-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\dhara\.gradle\caches\9.1.0\transforms\c2b1c181493b2d43f31db17f1956c070\workspace\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:34:9-52:20
-122            android:name="androidx.profileinstaller.ProfileInstallReceiver"
-122-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\dhara\.gradle\caches\9.1.0\transforms\c2b1c181493b2d43f31db17f1956c070\workspace\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:35:13-76
-123            android:directBootAware="false"
-123-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\dhara\.gradle\caches\9.1.0\transforms\c2b1c181493b2d43f31db17f1956c070\workspace\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:36:13-44
-124            android:enabled="true"
-124-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\dhara\.gradle\caches\9.1.0\transforms\c2b1c181493b2d43f31db17f1956c070\workspace\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:37:13-35
-125            android:exported="true"
-125-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\dhara\.gradle\caches\9.1.0\transforms\c2b1c181493b2d43f31db17f1956c070\workspace\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:38:13-36
-126            android:permission="android.permission.DUMP" >
-126-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\dhara\.gradle\caches\9.1.0\transforms\c2b1c181493b2d43f31db17f1956c070\workspace\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:39:13-57
-127            <intent-filter>
-127-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\dhara\.gradle\caches\9.1.0\transforms\c2b1c181493b2d43f31db17f1956c070\workspace\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:40:13-42:29
-128                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
-128-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\dhara\.gradle\caches\9.1.0\transforms\c2b1c181493b2d43f31db17f1956c070\workspace\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:41:17-91
-128-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\dhara\.gradle\caches\9.1.0\transforms\c2b1c181493b2d43f31db17f1956c070\workspace\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:41:25-88
-129            </intent-filter>
+118-->[androidx.lifecycle:lifecycle-process:2.6.1] C:\Users\dhara\.gradle\caches\9.1.0\transforms\81f28284e83fd14ffad73994df85338f\workspace\transformed\jetified-lifecycle-process-2.6.1\AndroidManifest.xml:31:17-49
+119            <meta-data
+119-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\dhara\.gradle\caches\9.1.0\transforms\c2b1c181493b2d43f31db17f1956c070\workspace\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:29:13-31:52
+120                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+120-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\dhara\.gradle\caches\9.1.0\transforms\c2b1c181493b2d43f31db17f1956c070\workspace\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:30:17-85
+121                android:value="androidx.startup" />
+121-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\dhara\.gradle\caches\9.1.0\transforms\c2b1c181493b2d43f31db17f1956c070\workspace\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:31:17-49
+122        </provider>
+123
+124        <receiver
+124-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\dhara\.gradle\caches\9.1.0\transforms\c2b1c181493b2d43f31db17f1956c070\workspace\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:34:9-52:20
+125            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+125-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\dhara\.gradle\caches\9.1.0\transforms\c2b1c181493b2d43f31db17f1956c070\workspace\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:35:13-76
+126            android:directBootAware="false"
+126-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\dhara\.gradle\caches\9.1.0\transforms\c2b1c181493b2d43f31db17f1956c070\workspace\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:36:13-44
+127            android:enabled="true"
+127-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\dhara\.gradle\caches\9.1.0\transforms\c2b1c181493b2d43f31db17f1956c070\workspace\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:37:13-35
+128            android:exported="true"
+128-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\dhara\.gradle\caches\9.1.0\transforms\c2b1c181493b2d43f31db17f1956c070\workspace\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:38:13-36
+129            android:permission="android.permission.DUMP" >
+129-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\dhara\.gradle\caches\9.1.0\transforms\c2b1c181493b2d43f31db17f1956c070\workspace\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:39:13-57
 130            <intent-filter>
-130-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\dhara\.gradle\caches\9.1.0\transforms\c2b1c181493b2d43f31db17f1956c070\workspace\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:43:13-45:29
-131                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
-131-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\dhara\.gradle\caches\9.1.0\transforms\c2b1c181493b2d43f31db17f1956c070\workspace\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:44:17-85
-131-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\dhara\.gradle\caches\9.1.0\transforms\c2b1c181493b2d43f31db17f1956c070\workspace\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:44:25-82
+130-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\dhara\.gradle\caches\9.1.0\transforms\c2b1c181493b2d43f31db17f1956c070\workspace\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:40:13-42:29
+131                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+131-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\dhara\.gradle\caches\9.1.0\transforms\c2b1c181493b2d43f31db17f1956c070\workspace\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:41:17-91
+131-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\dhara\.gradle\caches\9.1.0\transforms\c2b1c181493b2d43f31db17f1956c070\workspace\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:41:25-88
 132            </intent-filter>
 133            <intent-filter>
-133-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\dhara\.gradle\caches\9.1.0\transforms\c2b1c181493b2d43f31db17f1956c070\workspace\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:46:13-48:29
-134                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
-134-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\dhara\.gradle\caches\9.1.0\transforms\c2b1c181493b2d43f31db17f1956c070\workspace\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:47:17-88
-134-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\dhara\.gradle\caches\9.1.0\transforms\c2b1c181493b2d43f31db17f1956c070\workspace\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:47:25-85
+133-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\dhara\.gradle\caches\9.1.0\transforms\c2b1c181493b2d43f31db17f1956c070\workspace\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:43:13-45:29
+134                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+134-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\dhara\.gradle\caches\9.1.0\transforms\c2b1c181493b2d43f31db17f1956c070\workspace\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:44:17-85
+134-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\dhara\.gradle\caches\9.1.0\transforms\c2b1c181493b2d43f31db17f1956c070\workspace\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:44:25-82
 135            </intent-filter>
 136            <intent-filter>
-136-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\dhara\.gradle\caches\9.1.0\transforms\c2b1c181493b2d43f31db17f1956c070\workspace\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:49:13-51:29
-137                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
-137-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\dhara\.gradle\caches\9.1.0\transforms\c2b1c181493b2d43f31db17f1956c070\workspace\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:50:17-95
-137-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\dhara\.gradle\caches\9.1.0\transforms\c2b1c181493b2d43f31db17f1956c070\workspace\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:50:25-92
+136-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\dhara\.gradle\caches\9.1.0\transforms\c2b1c181493b2d43f31db17f1956c070\workspace\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:46:13-48:29
+137                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+137-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\dhara\.gradle\caches\9.1.0\transforms\c2b1c181493b2d43f31db17f1956c070\workspace\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:47:17-88
+137-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\dhara\.gradle\caches\9.1.0\transforms\c2b1c181493b2d43f31db17f1956c070\workspace\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:47:25-85
 138            </intent-filter>
-139        </receiver>
-140    </application>
-141
-142</manifest>
+139            <intent-filter>
+139-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\dhara\.gradle\caches\9.1.0\transforms\c2b1c181493b2d43f31db17f1956c070\workspace\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:49:13-51:29
+140                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+140-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\dhara\.gradle\caches\9.1.0\transforms\c2b1c181493b2d43f31db17f1956c070\workspace\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:50:17-95
+140-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\dhara\.gradle\caches\9.1.0\transforms\c2b1c181493b2d43f31db17f1956c070\workspace\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:50:25-92
+141            </intent-filter>
+142        </receiver>
+143    </application>
+144
+145</manifest>

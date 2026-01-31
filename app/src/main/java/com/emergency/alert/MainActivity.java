@@ -8,6 +8,8 @@ import android.graphics.Color;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
 import android.widget.*;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -22,31 +24,41 @@ public class MainActivity extends AppCompatActivity {
     private TextView tvWelcome, tvStatus;
     private Button btnEmergencyMode, btnSOS, btnCallEmergency;
     private Button btnProfile, btnContacts, btnLocation, btnCalculator, btnWebInfo, btnImageEditor;
-    private Button btnDatabaseTest; // ✅ ADDED - Database test button
 
     private DatabaseHelper dbHelper;
     private SharedPreferences prefs;
     private boolean isEmergencyMode = false;
 
     private static final int PERMISSION_REQUEST = 100;
+    private static final String TAG = "MainActivity";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        dbHelper = new DatabaseHelper(this);
+        Log.d(TAG, "onCreate started");
+
+        try {
+            dbHelper = new DatabaseHelper(this);
+            Log.d(TAG, "Database initialized");
+        } catch (Exception e) {
+            Log.e(TAG, "Database initialization failed", e);
+        }
+
         prefs = getSharedPreferences("EmergencyAlertPrefs", MODE_PRIVATE);
 
         initializeViews();
         requestPermissions();
         setupListeners();
-
-        // ✅ ADDED - Verify database connection
         verifyDatabase();
+
+        Log.d(TAG, "onCreate completed");
     }
 
     private void initializeViews() {
+        Log.d(TAG, "initializeViews started");
+
         mainLayout = findViewById(R.id.main_layout);
         tvWelcome = findViewById(R.id.tv_welcome);
         tvStatus = findViewById(R.id.tv_status);
@@ -62,19 +74,17 @@ public class MainActivity extends AppCompatActivity {
         btnWebInfo = findViewById(R.id.btn_web_info);
         btnImageEditor = findViewById(R.id.btn_image_editor);
 
-        // ✅ ADDED - Initialize database test button
-        btnDatabaseTest = findViewById(R.id.btn_database_test);
-
         tvWelcome.setText("Welcome, User!");
         tvStatus.setText("Status: Normal");
+
+        Log.d(TAG, "initializeViews completed");
     }
 
     private void setupListeners() {
+        Log.d(TAG, "setupListeners started");
 
         btnEmergencyMode.setOnClickListener(v -> toggleEmergencyMode());
-
         btnSOS.setOnClickListener(v -> sendSOS());
-
         btnCallEmergency.setOnClickListener(v -> {
             Intent intent = new Intent(Intent.ACTION_DIAL, Uri.parse("tel:112"));
             startActivity(intent);
@@ -87,11 +97,57 @@ public class MainActivity extends AppCompatActivity {
         btnImageEditor.setOnClickListener(v -> startActivity(new Intent(this, ImageEditorActivity.class)));
         btnLocation.setOnClickListener(v -> startLocationTracking());
 
-        // ✅ ADDED - Database test button listener
-        if (btnDatabaseTest != null) {
-            btnDatabaseTest.setOnClickListener(v ->
-                    startActivity(new Intent(this, DatabaseTestActivity.class)));
+        // Safety Tips button - SAFE VERSION
+        try {
+            Button btnSafetyTips = findViewById(R.id.btn_safety_tips);
+            if (btnSafetyTips != null) {
+                btnSafetyTips.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Log.d(TAG, "Safety Tips button clicked");
+                        try {
+                            Intent intent = new Intent(MainActivity.this, SafetyTipsActivity.class);
+                            startActivity(intent);
+                        } catch (Exception e) {
+                            Log.e(TAG, "Error opening SafetyTipsActivity", e);
+                            Toast.makeText(MainActivity.this, "Error: " + e.getMessage(), Toast.LENGTH_LONG).show();
+                        }
+                    }
+                });
+                Log.d(TAG, "Safety Tips button listener set");
+            } else {
+                Log.w(TAG, "Safety Tips button not found");
+            }
+        } catch (Exception e) {
+            Log.e(TAG, "Error setting up Safety Tips button", e);
         }
+
+        // Database Test button - SAFE VERSION
+        try {
+            Button btnDatabaseTest = findViewById(R.id.btn_database_test);
+            if (btnDatabaseTest != null) {
+                btnDatabaseTest.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Log.d(TAG, "Database Test button clicked");
+                        try {
+                            Intent intent = new Intent(MainActivity.this, DatabaseTestActivity.class);
+                            startActivity(intent);
+                        } catch (Exception e) {
+                            Log.e(TAG, "Error opening DatabaseTestActivity", e);
+                            Toast.makeText(MainActivity.this, "Error: " + e.getMessage(), Toast.LENGTH_LONG).show();
+                        }
+                    }
+                });
+                Log.d(TAG, "Database Test button listener set");
+            } else {
+                Log.w(TAG, "Database Test button not found");
+            }
+        } catch (Exception e) {
+            Log.e(TAG, "Error setting up Database Test button", e);
+        }
+
+        Log.d(TAG, "setupListeners completed");
     }
 
     private void toggleEmergencyMode() {
@@ -119,6 +175,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void sendSOS() {
+        if (dbHelper == null) {
+            Toast.makeText(this, "Database not available", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
         List<DatabaseHelper.EmergencyContact> contacts = dbHelper.getAllEmergencyContacts();
 
         if (contacts.isEmpty()) {
@@ -127,9 +188,13 @@ public class MainActivity extends AppCompatActivity {
         }
 
         for (DatabaseHelper.EmergencyContact c : contacts) {
-            android.telephony.SmsManager.getDefault()
-                    .sendTextMessage(c.phone, null,
-                            "⚠️ EMERGENCY! Please help!", null, null);
+            try {
+                android.telephony.SmsManager.getDefault()
+                        .sendTextMessage(c.phone, null,
+                                "⚠️ EMERGENCY! Please help!", null, null);
+            } catch (Exception e) {
+                Log.e(TAG, "Error sending SMS to " + c.phone, e);
+            }
         }
 
         Toast.makeText(this, "SOS sent to " + contacts.size() + " contacts", Toast.LENGTH_SHORT).show();
@@ -159,17 +224,26 @@ public class MainActivity extends AppCompatActivity {
                 }, PERMISSION_REQUEST);
     }
 
-    // ✅ ADDED - Verify database is working
     private void verifyDatabase() {
+        if (dbHelper == null) {
+            Log.e(TAG, "Database is null");
+            Toast.makeText(this, "Database not initialized", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
         try {
             int tipCount = dbHelper.getAllSafetyTips().size();
             int contactCount = dbHelper.getAllEmergencyContacts().size();
 
-            android.util.Log.d("MainActivity", "✅ Database connected!");
-            android.util.Log.d("MainActivity", "   Safety Tips: " + tipCount);
-            android.util.Log.d("MainActivity", "   Contacts: " + contactCount);
+            Log.d(TAG, "✅ Database connected!");
+            Log.d(TAG, "   Safety Tips: " + tipCount);
+            Log.d(TAG, "   Contacts: " + contactCount);
+
+            Toast.makeText(this, "DB Ready: " + tipCount + " tips, " + contactCount + " contacts",
+                    Toast.LENGTH_SHORT).show();
         } catch (Exception e) {
-            android.util.Log.e("MainActivity", "❌ Database error: " + e.getMessage());
+            Log.e(TAG, "❌ Database error", e);
+            Toast.makeText(this, "Database error: " + e.getMessage(), Toast.LENGTH_LONG).show();
         }
     }
 }

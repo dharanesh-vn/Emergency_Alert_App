@@ -62,7 +62,10 @@
         <activity android:name="com.emergency.alert.WebViewActivity" />
         <activity android:name="com.emergency.alert.ImageEditorActivity" />
 
-        <!-- ✅ ADD THIS ONE LINE - Database Test Activity -->
+        <!-- ✅ ADD THESE TWO LINES -->
+        <activity
+            android:name="com.emergency.alert.SafetyTipsActivity"
+            android:label="Safety Tips" />
         <activity
             android:name="com.emergency.alert.DatabaseTestActivity"
             android:label="Database Inspector" />

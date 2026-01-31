@@ -34,7 +34,9 @@
         <activity android:name=".WebViewActivity"/>
         <activity android:name=".ImageEditorActivity"/>
 
-        <!-- ✅ ADD THIS ONE LINE - Database Test Activity -->
+        <!-- ✅ ADD THESE TWO LINES -->
+        <activity android:name=".SafetyTipsActivity"
+            android:label="Safety Tips"/>
         <activity android:name=".DatabaseTestActivity"
             android:label="Database Inspector"/>
 

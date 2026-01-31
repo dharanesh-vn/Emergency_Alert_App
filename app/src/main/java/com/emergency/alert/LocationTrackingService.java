@@ -2,7 +2,6 @@ package com.emergency.alert;
 
 import android.Manifest;
 import android.app.Service;
-import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.location.Location;
 import android.os.IBinder;
@@ -25,6 +24,16 @@ public class LocationTrackingService extends Service {
     @Override
     public void onCreate() {
         super.onCreate();
+
+        // ✅ Android 14+ foreground location permission check
+        if (android.os.Build.VERSION.SDK_INT >= 34) {
+            if (checkSelfPermission(
+                    Manifest.permission.FOREGROUND_SERVICE_LOCATION
+            ) != PackageManager.PERMISSION_GRANTED) {
+                stopSelf();
+                return;
+            }
+        }
 
         fusedLocationClient =
                 LocationServices.getFusedLocationProviderClient(this);
@@ -51,7 +60,7 @@ public class LocationTrackingService extends Service {
                 if (result == null) return;
 
                 for (Location location : result.getLocations()) {
-                    // You can store or broadcast this location if needed
+                    // Location received (can store or broadcast later)
                 }
             }
         };
@@ -80,7 +89,7 @@ public class LocationTrackingService extends Service {
     }
 
     @Override
-    public IBinder onBind(Intent intent) {
+    public IBinder onBind(android.content.Intent intent) {
         return null;
     }
 }

@@ -25,94 +25,86 @@ public class GeofenceBroadcastReceiver extends BroadcastReceiver {
         GeofencingEvent event = GeofencingEvent.fromIntent(intent);
 
         if (event == null || event.hasError()) {
-            Log.e(TAG, "Geofence error");
+            Log.e(TAG, "Invalid geofence event");
             return;
         }
 
-        // Android 13+ notification permission check
+        // Android 13+ notification permission
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU &&
                 ActivityCompat.checkSelfPermission(
                         context,
                         Manifest.permission.POST_NOTIFICATIONS
                 ) != PackageManager.PERMISSION_GRANTED) {
-            Log.w(TAG, "Notification permission not granted");
+            Log.w(TAG, "Notification permission missing");
             return;
         }
 
         int transition = event.getGeofenceTransition();
-        List<Geofence> geofences = event.getTriggeringGeofences();
+        List<Geofence> geofenceList = event.getTriggeringGeofences();
 
-        if (geofences == null || geofences.isEmpty()) {
-            return;
-        }
+        if (geofenceList == null || geofenceList.isEmpty()) return;
 
-        String geofenceId = geofences.get(0).getRequestId();
-        DatabaseHelper dbHelper = new DatabaseHelper(context);
+        String geofenceId = geofenceList.get(0).getRequestId();
+        DatabaseHelper db = new DatabaseHelper(context);
 
-        switch (transition) {
+        if (transition == Geofence.GEOFENCE_TRANSITION_ENTER) {
 
-            case Geofence.GEOFENCE_TRANSITION_ENTER:
-                handleEnter(context, geofenceId, dbHelper);
-                break;
+            handleEnter(context, geofenceId, db);
 
-            case Geofence.GEOFENCE_TRANSITION_DWELL:
-                NotificationHelper.showEmergencyNotification(
-                        context,
-                        "⚠️ Prolonged Stay Warning",
-                        "You have stayed in a risky area for too long."
-                );
+        } else if (transition == Geofence.GEOFENCE_TRANSITION_DWELL) {
 
-                dbHelper.addEmergencyEvent(
-                        "Geofence DWELL",
-                        geofenceId,
-                        "User stayed too long in monitored area"
-                );
-                break;
+            NotificationHelper.showEmergencyNotification(
+                    context,
+                    "⚠️ Prolonged Stay Alert",
+                    "You are staying too long in a risky area."
+            );
 
-            case Geofence.GEOFENCE_TRANSITION_EXIT:
-                NotificationHelper.showEmergencyNotification(
-                        context,
-                        "✅ Safe Zone",
-                        "You have exited the monitored area."
-                );
+            db.addEmergencyEvent(
+                    "GEOFENCE_DWELL",
+                    geofenceId,
+                    "User stayed too long"
+            );
 
-                dbHelper.addEmergencyEvent(
-                        "Geofence EXIT",
-                        geofenceId,
-                        "User exited monitored area"
-                );
-                break;
+        } else if (transition == Geofence.GEOFENCE_TRANSITION_EXIT) {
+
+            NotificationHelper.showEmergencyNotification(
+                    context,
+                    "✅ Safe Zone",
+                    "You exited the monitored area."
+            );
+
+            db.addEmergencyEvent(
+                    "GEOFENCE_EXIT",
+                    geofenceId,
+                    "User exited zone"
+            );
         }
     }
 
-    private void handleEnter(Context context, String geofenceId, DatabaseHelper dbHelper) {
+    private void handleEnter(Context context, String geofenceId, DatabaseHelper db) {
 
-        String title;
-        String message;
+        String title = "⚠️ Area Alert";
+        String message = "You entered a monitored zone.";
 
         if (geofenceId.contains("UNSAFE")) {
-            title = "⚠️ Unsafe Area Alert";
-            message = "You entered an unsafe zone. Stay alert.";
+            title = "⚠️ Unsafe Area";
+            message = "High risk area. Stay alert.";
 
         } else if (geofenceId.contains("ACCIDENT")) {
-            title = "⚠️ Accident-Prone Area";
-            message = "High accident risk area. Proceed carefully.";
+            title = "⚠️ Accident Zone";
+            message = "Accident-prone area. Drive carefully.";
 
         } else if (geofenceId.contains("DISASTER")) {
-            title = "⚠️ Disaster Zone Alert";
-            message = "Disaster-affected area. Follow safety instructions.";
-
-        } else {
-            title = "⚠️ Area Alert";
-            message = "You entered a monitored zone.";
+            title = "⚠️ Disaster Zone";
+            message = "Disaster-affected area. Follow safety rules.";
         }
 
         NotificationHelper.showEmergencyNotification(context, title, message);
 
-        dbHelper.addEmergencyEvent(
-                "Geofence ENTER",
+        db.addEmergencyEvent(
+                "GEOFENCE_ENTER",
                 geofenceId,
-                "User entered monitored zone"
+                "User entered zone"
         );
     }
 }

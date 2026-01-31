@@ -13,10 +13,14 @@ public class MediaService extends Service {
     public int onStartCommand(Intent intent, int flags, int startId) {
 
         if (intent != null && intent.getAction() != null) {
-            if ("PLAY_SIREN".equals(intent.getAction())) {
-                playSiren();
-            } else if ("STOP_SIREN".equals(intent.getAction())) {
-                stopSiren();
+            switch (intent.getAction()) {
+                case "PLAY_SIREN":
+                    playSiren();
+                    break;
+                case "STOP_SIREN":
+                    stopSiren();
+                    stopSelf();
+                    break;
             }
         }
         return START_STICKY;
@@ -25,14 +29,20 @@ public class MediaService extends Service {
     private void playSiren() {
         if (sirenPlayer == null) {
             sirenPlayer = MediaPlayer.create(this, R.raw.siren);
-            sirenPlayer.setLooping(true);
+            if (sirenPlayer != null) {
+                sirenPlayer.setLooping(true);
+                sirenPlayer.start();
+            }
+        } else if (!sirenPlayer.isPlaying()) {
+            sirenPlayer.start();
         }
-        if (!sirenPlayer.isPlaying()) sirenPlayer.start();
     }
 
     private void stopSiren() {
         if (sirenPlayer != null) {
-            sirenPlayer.stop();
+            try {
+                sirenPlayer.stop();
+            } catch (Exception ignored) {}
             sirenPlayer.release();
             sirenPlayer = null;
         }

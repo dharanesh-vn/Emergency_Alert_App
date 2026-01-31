@@ -24,6 +24,7 @@ public class CalculatorActivity extends AppCompatActivity {
 
         initializeViews();
         setupListeners();
+        updateInputLabels();
     }
 
     private void initializeViews() {
@@ -37,20 +38,12 @@ public class CalculatorActivity extends AppCompatActivity {
         tvLabel3 = findViewById(R.id.tv_label3);
         btnCalculate = findViewById(R.id.btn_calculate);
 
-        updateInputLabels();
+        tvResult.setText(getString(R.string.result_placeholder));
     }
 
     private void setupListeners() {
-        rgCalculatorType.setOnCheckedChangeListener((group, checkedId) -> {
-            updateInputLabels();
-        });
-
-        btnCalculate.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                performCalculation();
-            }
-        });
+        rgCalculatorType.setOnCheckedChangeListener((group, checkedId) -> updateInputLabels());
+        btnCalculate.setOnClickListener(v -> performCalculation());
     }
 
     private void updateInputLabels() {
@@ -60,26 +53,29 @@ public class CalculatorActivity extends AppCompatActivity {
         tvLabel3.setVisibility(View.GONE);
 
         if (selectedId == R.id.rb_distance) {
-            tvLabel1.setText("Latitude 1:");
-            tvLabel2.setText("Longitude 1:");
-            tvLabel3.setText("Latitude 2:");
+            tvLabel1.setText(getString(R.string.lat_1));
+            tvLabel2.setText(getString(R.string.lon_1));
+            tvLabel3.setText(getString(R.string.lat_2));
             etInput3.setVisibility(View.VISIBLE);
             tvLabel3.setVisibility(View.VISIBLE);
+
         } else if (selectedId == R.id.rb_travel_time) {
-            tvLabel1.setText("Distance (km):");
-            tvLabel2.setText("Speed (km/h):");
+            tvLabel1.setText(getString(R.string.distance_km));
+            tvLabel2.setText(getString(R.string.speed_kmh));
+
         } else if (selectedId == R.id.rb_dosage) {
-            tvLabel1.setText("Age (years):");
-            tvLabel2.setText("Weight (kg):");
+            tvLabel1.setText(getString(R.string.age_years));
+            tvLabel2.setText(getString(R.string.weight_kg));
+
         } else if (selectedId == R.id.rb_battery) {
-            tvLabel1.setText("Battery % Left:");
-            tvLabel2.setText("Usage Rate (%/hr):");
+            tvLabel1.setText(getString(R.string.battery_percent));
+            tvLabel2.setText(getString(R.string.usage_rate));
         }
 
         etInput1.setText("");
         etInput2.setText("");
         etInput3.setText("");
-        tvResult.setText("Result will appear here");
+        tvResult.setText(getString(R.string.result_placeholder));
     }
 
     private void performCalculation() {
@@ -96,7 +92,7 @@ public class CalculatorActivity extends AppCompatActivity {
                 calculateBatteryTime();
             }
         } catch (NumberFormatException e) {
-            Toast.makeText(this, "Please enter valid numbers", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, getString(R.string.invalid_numbers), Toast.LENGTH_SHORT).show();
         }
     }
 
@@ -104,12 +100,13 @@ public class CalculatorActivity extends AppCompatActivity {
         double lat1 = Double.parseDouble(etInput1.getText().toString());
         double lon1 = Double.parseDouble(etInput2.getText().toString());
 
-        // For simplicity, assume hospital at a fixed location
         double lat2 = lat1 + 0.1;
         double lon2 = lon1 + 0.1;
 
-        // Simple distance calculation (Haversine formula simplified)
-        double distance = Math.sqrt(Math.pow(lat2 - lat1, 2) + Math.pow(lon2 - lon1, 2)) * 111; // km
+        double distance = Math.sqrt(
+                Math.pow(lat2 - lat1, 2) +
+                        Math.pow(lon2 - lon1, 2)
+        ) * 111;
 
         tvResult.setText(String.format("Distance to nearest hospital:\n%.2f km", distance));
     }
@@ -119,46 +116,41 @@ public class CalculatorActivity extends AppCompatActivity {
         double speed = Double.parseDouble(etInput2.getText().toString());
 
         if (speed == 0) {
-            Toast.makeText(this, "Speed cannot be zero", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, getString(R.string.speed_zero), Toast.LENGTH_SHORT).show();
             return;
         }
 
-        double timeHours = distance / speed;
-        int hours = (int) timeHours;
-        int minutes = (int) ((timeHours - hours) * 60);
+        double time = distance / speed;
+        int hours = (int) time;
+        int minutes = (int) ((time - hours) * 60);
 
-        tvResult.setText(String.format("Estimated travel time:\n%d hours %d minutes", hours, minutes));
+        tvResult.setText("Estimated travel time:\n" + hours + "h " + minutes + "m");
     }
 
     private void calculateDosage() {
         int age = Integer.parseInt(etInput1.getText().toString());
         double weight = Double.parseDouble(etInput2.getText().toString());
 
-        // Simple dosage formula (for demonstration only - NOT medical advice)
-        double baseDosage = weight * 0.15; // mg per kg
+        double dosage = weight * 0.15;
+        if (age < 12) dosage *= 0.5;
+        if (age > 65) dosage *= 0.75;
 
-        if (age < 12) {
-            baseDosage *= 0.5; // Children get half dose
-        } else if (age > 65) {
-            baseDosage *= 0.75; // Elderly get reduced dose
-        }
-
-        tvResult.setText(String.format("Recommended dosage:\n%.2f mg\n\n⚠️ Demo only - Consult medical professional!", baseDosage));
+        tvResult.setText("Recommended dosage:\n" + String.format("%.2f mg", dosage));
     }
 
     private void calculateBatteryTime() {
-        double batteryPercent = Double.parseDouble(etInput1.getText().toString());
-        double usageRate = Double.parseDouble(etInput2.getText().toString());
+        double battery = Double.parseDouble(etInput1.getText().toString());
+        double rate = Double.parseDouble(etInput2.getText().toString());
 
-        if (usageRate == 0) {
-            Toast.makeText(this, "Usage rate cannot be zero", Toast.LENGTH_SHORT).show();
+        if (rate == 0) {
+            Toast.makeText(this, getString(R.string.usage_zero), Toast.LENGTH_SHORT).show();
             return;
         }
 
-        double hoursLeft = batteryPercent / usageRate;
+        double hoursLeft = battery / rate;
         int hours = (int) hoursLeft;
         int minutes = (int) ((hoursLeft - hours) * 60);
 
-        tvResult.setText(String.format("Battery time remaining:\n%d hours %d minutes", hours, minutes));
+        tvResult.setText("Battery remaining:\n" + hours + "h " + minutes + "m");
     }
 }

@@ -132,5 +132,15 @@
             android:text="Emergency Image Capture &amp; Edit"
             android:layout_marginBottom="8dp" />
 
+        <!-- ✅ ADDED - Database Test Button -->
+        <Button
+            android:id="@+id/btn_database_test"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="🔍 View Database"
+            android:backgroundTint="#2196F3"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="8dp" />
+
     </LinearLayout>
 </ScrollView>

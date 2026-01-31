@@ -3206,6 +3206,8 @@ int id bounce 0x7f080060
 int id bounceBoth 0x7f080061
 int id bounceEnd 0x7f080062
 int id bounceStart 0x7f080063
+int id btnAddTestData 0x7f080230
+int id btnRefresh 0x7f080231
 int id btn_add_contact 0x7f080064
 int id btn_ambulance 0x7f080065
 int id btn_blur 0x7f080066
@@ -3216,6 +3218,7 @@ int id btn_call_emergency 0x7f08006a
 int id btn_capture 0x7f08006b
 int id btn_contacts 0x7f08006c
 int id btn_crop 0x7f08006d
+int id btn_database_test 0x7f080232
 int id btn_disaster_alerts 0x7f08006e
 int id btn_emergency_guidelines 0x7f08006f
 int id btn_emergency_mode 0x7f080070
@@ -3633,6 +3636,7 @@ int id transition_position 0x7f08020b
 int id transition_scene_layoutid_cache 0x7f08020c
 int id transition_transform 0x7f08020d
 int id triangle 0x7f08020e
+int id tvResults 0x7f080233
 int id tv_font_size_value 0x7f08020f
 int id tv_label1 0x7f080210
 int id tv_label2 0x7f080211
@@ -3782,6 +3786,7 @@ int layout abc_search_view 0x7f0b0019
 int layout abc_select_dialog_material 0x7f0b001a
 int layout abc_tooltip 0x7f0b001b
 int layout activity_calculator 0x7f0b001c
+int layout activity_database_test 0x7f0b0071
 int layout activity_emergency_contacts 0x7f0b001d
 int layout activity_image_editor 0x7f0b001e
 int layout activity_login 0x7f0b001f
@@ -3897,9 +3902,11 @@ int string abc_searchview_description_voice 0x7f100017
 int string abc_shareactionprovider_share_with 0x7f100018
 int string abc_shareactionprovider_share_with_application 0x7f100019
 int string abc_toolbar_collapse_description 0x7f10001a
+int string age_years 0x7f1000b5
 int string androidx_startup 0x7f10001b
 int string app_name 0x7f10001c
 int string appbar_scrolling_view_behavior 0x7f10001d
+int string battery_percent 0x7f1000b6
 int string bottom_sheet_behavior 0x7f10001e
 int string bottomsheet_action_collapse 0x7f10001f
 int string bottomsheet_action_expand 0x7f100020
@@ -3929,6 +3936,7 @@ int string common_google_play_services_wear_update_text 0x7f100037
 int string common_open_on_phone 0x7f100038
 int string common_signin_button_text 0x7f100039
 int string common_signin_button_text_long 0x7f10003a
+int string distance_km 0x7f1000b7
 int string emergency_mode 0x7f10003b
 int string error_a11y_label 0x7f10003c
 int string error_icon_content_description 0x7f10003d
@@ -3937,7 +3945,11 @@ int string fab_transformation_scrim_behavior 0x7f10003f
 int string fab_transformation_sheet_behavior 0x7f100040
 int string hide_bottom_view_on_scroll_behavior 0x7f100041
 int string icon_content_description 0x7f100042
+int string invalid_numbers 0x7f1000b8
 int string item_view_role_description 0x7f100043
+int string lat_1 0x7f1000b9
+int string lat_2 0x7f1000ba
+int string lon_1 0x7f1000bb
 int string m3_exceed_max_badge_text_suffix 0x7f100044
 int string m3_ref_typeface_brand_medium 0x7f100045
 int string m3_ref_typeface_brand_regular 0x7f100046
@@ -4043,6 +4055,7 @@ int string path_password_eye 0x7f1000a9
 int string path_password_eye_mask_strike_through 0x7f1000aa
 int string path_password_eye_mask_visible 0x7f1000ab
 int string path_password_strike_through 0x7f1000ac
+int string result_placeholder 0x7f1000bc
 int string search_menu_title 0x7f1000ad
 int string searchbar_scrolling_view_behavior 0x7f1000ae
 int string searchview_clear_text_content_description 0x7f1000af
@@ -4050,7 +4063,12 @@ int string searchview_navigation_content_description 0x7f1000b0
 int string side_sheet_accessibility_pane_title 0x7f1000b1
 int string side_sheet_behavior 0x7f1000b2
 int string sos 0x7f1000b3
+int string speed_kmh 0x7f1000bd
+int string speed_zero 0x7f1000be
 int string status_bar_notification_info_overflow 0x7f1000b4
+int string usage_rate 0x7f1000bf
+int string usage_zero 0x7f1000c0
+int string weight_kg 0x7f1000c1
 int style AlertDialog_AppCompat 0x7f110000
 int style AlertDialog_AppCompat_Light 0x7f110001
 int style Animation_AppCompat_Dialog 0x7f110002

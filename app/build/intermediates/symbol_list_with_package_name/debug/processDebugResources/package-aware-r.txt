@@ -3207,6 +3207,8 @@ id bounce
 id bounceBoth
 id bounceEnd
 id bounceStart
+id btnAddTestData
+id btnRefresh
 id btn_add_contact
 id btn_ambulance
 id btn_blur
@@ -3217,6 +3219,7 @@ id btn_call_emergency
 id btn_capture
 id btn_contacts
 id btn_crop
+id btn_database_test
 id btn_disaster_alerts
 id btn_emergency_guidelines
 id btn_emergency_mode
@@ -3634,6 +3637,7 @@ id transition_position
 id transition_scene_layoutid_cache
 id transition_transform
 id triangle
+id tvResults
 id tv_font_size_value
 id tv_label1
 id tv_label2
@@ -3783,6 +3787,7 @@ layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_calculator
+layout activity_database_test
 layout activity_emergency_contacts
 layout activity_image_editor
 layout activity_login
@@ -3898,9 +3903,11 @@ string abc_searchview_description_voice
 string abc_shareactionprovider_share_with
 string abc_shareactionprovider_share_with_application
 string abc_toolbar_collapse_description
+string age_years
 string androidx_startup
 string app_name
 string appbar_scrolling_view_behavior
+string battery_percent
 string bottom_sheet_behavior
 string bottomsheet_action_collapse
 string bottomsheet_action_expand
@@ -3930,6 +3937,7 @@ string common_google_play_services_wear_update_text
 string common_open_on_phone
 string common_signin_button_text
 string common_signin_button_text_long
+string distance_km
 string emergency_mode
 string error_a11y_label
 string error_icon_content_description
@@ -3938,7 +3946,11 @@ string fab_transformation_scrim_behavior
 string fab_transformation_sheet_behavior
 string hide_bottom_view_on_scroll_behavior
 string icon_content_description
+string invalid_numbers
 string item_view_role_description
+string lat_1
+string lat_2
+string lon_1
 string m3_exceed_max_badge_text_suffix
 string m3_ref_typeface_brand_medium
 string m3_ref_typeface_brand_regular
@@ -4044,6 +4056,7 @@ string path_password_eye
 string path_password_eye_mask_strike_through
 string path_password_eye_mask_visible
 string path_password_strike_through
+string result_placeholder
 string search_menu_title
 string searchbar_scrolling_view_behavior
 string searchview_clear_text_content_description
@@ -4051,7 +4064,12 @@ string searchview_navigation_content_description
 string side_sheet_accessibility_pane_title
 string side_sheet_behavior
 string sos
+string speed_kmh
+string speed_zero
 string status_bar_notification_info_overflow
+string usage_rate
+string usage_zero
+string weight_kg
 style AlertDialog_AppCompat
 style AlertDialog_AppCompat_Light
 style Animation_AppCompat_Dialog

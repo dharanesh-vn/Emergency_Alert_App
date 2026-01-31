@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:2:1-112:12
-INJECTED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:2:1-112:12
-INJECTED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:2:1-112:12
-INJECTED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:2:1-112:12
+ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:2:1-66:12
+INJECTED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:2:1-66:12
+INJECTED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:2:1-66:12
+INJECTED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:2:1-66:12
 MERGED from [com.google.android.material:material:1.10.0] C:\Users\dhara\.gradle\caches\9.1.0\transforms\7f741756021789ecda6b7da9b624af23\workspace\transformed\material-1.10.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\dhara\.gradle\caches\9.1.0\transforms\8c733786075954d23b40c9961d674455\workspace\transformed\constraintlayout-2.1.4\AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.appcompat:appcompat-resources:1.6.1] C:\Users\dhara\.gradle\caches\9.1.0\transforms\ffea51a0f1c65c064625cba14ca0df4a\workspace\transformed\jetified-appcompat-resources-1.6.1\AndroidManifest.xml:17:1-22:12
@@ -60,72 +60,50 @@ MERGED from [androidx.annotation:annotation-experimental:1.3.0] C:\Users\dhara\.
 	xmlns:android
 		ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:2:11-69
 uses-permission#android.permission.INTERNET
-ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:6:5-67
+ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:5:5-66
 MERGED from [com.google.android.gms:play-services-maps:18.2.0] C:\Users\dhara\.gradle\caches\9.1.0\transforms\b5726a481e3e7856bed03e737b3d0e5e\workspace\transformed\jetified-play-services-maps-18.2.0\AndroidManifest.xml:24:5-67
 MERGED from [com.google.android.gms:play-services-maps:18.2.0] C:\Users\dhara\.gradle\caches\9.1.0\transforms\b5726a481e3e7856bed03e737b3d0e5e\workspace\transformed\jetified-play-services-maps-18.2.0\AndroidManifest.xml:24:5-67
 	android:name
-		ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:6:22-64
+		ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:5:22-64
 uses-permission#android.permission.ACCESS_FINE_LOCATION
-ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:7:5-79
+ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:6:5-78
 	android:name
-		ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:7:22-76
+		ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:6:22-76
 uses-permission#android.permission.ACCESS_COARSE_LOCATION
-ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:8:5-81
+ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:7:5-80
 	android:name
-		ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:8:22-78
+		ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:7:22-78
 uses-permission#android.permission.ACCESS_BACKGROUND_LOCATION
-ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:9:5-85
+ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:8:5-84
 	android:name
-		ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:9:22-82
-uses-permission#android.permission.CALL_PHONE
-ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:10:5-69
-	android:name
-		ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:10:22-66
-uses-permission#android.permission.SEND_SMS
-ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:11:5-67
-	android:name
-		ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:11:22-64
-uses-permission#android.permission.CAMERA
-ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:12:5-65
-	android:name
-		ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:12:22-62
-uses-permission#android.permission.VIBRATE
-ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:13:5-66
-	android:name
-		ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:13:22-63
-uses-permission#android.permission.WAKE_LOCK
-ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:14:5-68
-	android:name
-		ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:14:22-65
+		ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:8:22-82
 uses-permission#android.permission.FOREGROUND_SERVICE
-ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:15:5-77
+ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:9:5-76
 	android:name
-		ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:15:22-74
+		ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:9:22-74
+uses-permission#android.permission.FOREGROUND_SERVICE_LOCATION
+ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:10:5-85
+	android:name
+		ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:10:22-83
+uses-permission#android.permission.CALL_PHONE
+ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:11:5-68
+	android:name
+		ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:11:22-66
+uses-permission#android.permission.SEND_SMS
+ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:12:5-66
+	android:name
+		ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:12:22-64
+uses-permission#android.permission.CAMERA
+ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:13:5-64
+	android:name
+		ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:13:22-62
 uses-permission#android.permission.POST_NOTIFICATIONS
-ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:16:5-77
+ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:14:5-76
 	android:name
-		ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:16:22-74
-uses-permission#android.permission.ACCESS_NETWORK_STATE
-ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:17:5-79
-MERGED from [com.google.android.gms:play-services-maps:18.2.0] C:\Users\dhara\.gradle\caches\9.1.0\transforms\b5726a481e3e7856bed03e737b3d0e5e\workspace\transformed\jetified-play-services-maps-18.2.0\AndroidManifest.xml:23:5-79
-MERGED from [com.google.android.gms:play-services-maps:18.2.0] C:\Users\dhara\.gradle\caches\9.1.0\transforms\b5726a481e3e7856bed03e737b3d0e5e\workspace\transformed\jetified-play-services-maps-18.2.0\AndroidManifest.xml:23:5-79
-	android:name
-		ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:17:22-76
-uses-feature#android.hardware.camera
-ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:20:5-22:36
-	android:required
-		ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:22:9-33
-	android:name
-		ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:21:9-47
-uses-feature#android.hardware.location.gps
-ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:23:5-25:36
-	android:required
-		ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:25:9-33
-	android:name
-		ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:24:9-53
+		ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:14:22-74
 application
-ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:27:5-110:19
-INJECTED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:27:5-110:19
+ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:16:5-64:19
+INJECTED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:16:5-64:19
 MERGED from [com.google.android.material:material:1.10.0] C:\Users\dhara\.gradle\caches\9.1.0\transforms\7f741756021789ecda6b7da9b624af23\workspace\transformed\material-1.10.0\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.10.0] C:\Users\dhara\.gradle\caches\9.1.0\transforms\7f741756021789ecda6b7da9b624af23\workspace\transformed\material-1.10.0\AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\dhara\.gradle\caches\9.1.0\transforms\8c733786075954d23b40c9961d674455\workspace\transformed\constraintlayout-2.1.4\AndroidManifest.xml:9:5-20
@@ -157,117 +135,91 @@ MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\dhara\.gradle\cach
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.9.0] C:\Users\dhara\.gradle\caches\9.1.0\transforms\066c12c00859d02386bf97d2cf6432de\workspace\transformed\core-1.9.0\AndroidManifest.xml:28:18-86
 	android:label
-		ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:31:9-40
-	android:roundIcon
-		ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:30:9-61
-	android:icon
-		ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:29:9-56
+		ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:18:9-40
 	android:allowBackup
-		ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:28:9-35
+		ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:17:9-35
 	android:theme
-		ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:32:9-40
+		ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:19:9-40
 	android:usesCleartextTraffic
-		ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:33:9-44
+		ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:20:9-44
 activity#com.emergency.alert.MainActivity
-ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:36:9-43:20
+ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:22:9-29:20
 	android:exported
-		ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:38:13-36
+		ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:24:13-36
 	android:name
-		ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:37:13-41
+		ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:23:13-41
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:39:13-42:29
+ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:25:13-28:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:40:17-69
+ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:26:17-68
 	android:name
-		ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:40:25-66
+		ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:26:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:41:17-77
+ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:27:17-76
 	android:name
-		ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:41:27-74
-activity#com.emergency.alert.LoginActivity
-ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:46:9-48:40
+		ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:27:27-74
+activity#com.emergency.alert.ProfileActivity
+ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:31:9-52
+	android:name
+		ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:31:19-50
+activity#com.emergency.alert.EmergencyContactsActivity
+ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:32:9-62
+	android:name
+		ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:32:19-60
+activity#com.emergency.alert.CalculatorActivity
+ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:33:9-55
+	android:name
+		ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:33:19-53
+activity#com.emergency.alert.WebViewActivity
+ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:34:9-52
+	android:name
+		ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:34:19-50
+activity#com.emergency.alert.ImageEditorActivity
+ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:35:9-56
+	android:name
+		ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:35:19-54
+activity#com.emergency.alert.DatabaseTestActivity
+ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:38:9-39:49
+	android:label
+		ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:39:13-47
+	android:name
+		ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:38:19-55
+service#com.emergency.alert.LocationTrackingService
+ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:41:9-44:39
+	android:exported
+		ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:44:13-37
+	android:foregroundServiceType
+		ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:43:13-53
+	android:name
+		ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:42:13-52
+service#com.emergency.alert.MediaService
+ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:46:9-48:39
 	android:exported
 		ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:48:13-37
 	android:name
-		ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:47:13-42
-activity#com.emergency.alert.ProfileActivity
-ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:51:9-53:40
-	android:exported
-		ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:53:13-37
-	android:name
-		ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:52:13-44
-activity#com.emergency.alert.EmergencyContactsActivity
-ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:56:9-58:40
-	android:exported
-		ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:58:13-37
-	android:name
-		ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:57:13-54
-activity#com.emergency.alert.SafetyTipsActivity
-ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:61:9-63:40
-	android:exported
-		ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:63:13-37
-	android:name
-		ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:62:13-47
-activity#com.emergency.alert.CalculatorActivity
-ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:66:9-68:40
-	android:exported
-		ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:68:13-37
-	android:name
-		ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:67:13-47
-activity#com.emergency.alert.WebViewActivity
-ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:71:9-73:40
-	android:exported
-		ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:73:13-37
-	android:name
-		ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:72:13-44
-activity#com.emergency.alert.ImageEditorActivity
-ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:76:9-78:40
-	android:exported
-		ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:78:13-37
-	android:name
-		ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:77:13-48
-service#com.emergency.alert.LocationTrackingService
-ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:81:9-85:56
-	android:enabled
-		ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:83:13-35
-	android:exported
-		ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:84:13-37
-	android:foregroundServiceType
-		ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:85:13-53
-	android:name
-		ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:82:13-52
-service#com.emergency.alert.MediaService
-ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:88:9-91:40
-	android:enabled
-		ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:90:13-35
-	android:exported
-		ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:91:13-37
-	android:name
-		ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:89:13-41
+		ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:47:13-41
 receiver#com.emergency.alert.GeofenceBroadcastReceiver
-ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:94:9-97:40
-	android:enabled
-		ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:96:13-35
+ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:50:9-52:39
 	android:exported
-		ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:97:13-37
+		ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:52:13-37
 	android:name
-		ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:95:13-54
+		ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:51:13-54
 provider#androidx.core.content.FileProvider
-ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:100:9-108:20
+ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:54:9-62:20
 	android:grantUriPermissions
-		ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:104:13-47
+		ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:58:13-47
 	android:authorities
-		ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:102:13-67
+		ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:56:13-67
 	android:exported
-		ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:103:13-37
+		ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:57:13-37
 	android:name
-		ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:101:13-62
+		ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:55:13-62
 meta-data#android.support.FILE_PROVIDER_PATHS
-ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:105:13-107:54
+ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:59:13-61:53
 	android:resource
-		ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:107:17-51
+		ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:61:17-51
 	android:name
-		ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:106:17-67
+		ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:60:17-67
 uses-sdk
 INJECTED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml
@@ -368,6 +320,10 @@ MERGED from [androidx.annotation:annotation-experimental:1.3.0] C:\Users\dhara\.
 		INJECTED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml
 	android:minSdkVersion
 		INJECTED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from [com.google.android.gms:play-services-maps:18.2.0] C:\Users\dhara\.gradle\caches\9.1.0\transforms\b5726a481e3e7856bed03e737b3d0e5e\workspace\transformed\jetified-play-services-maps-18.2.0\AndroidManifest.xml:23:5-79
+	android:name
+		ADDED from [com.google.android.gms:play-services-maps:18.2.0] C:\Users\dhara\.gradle\caches\9.1.0\transforms\b5726a481e3e7856bed03e737b3d0e5e\workspace\transformed\jetified-play-services-maps-18.2.0\AndroidManifest.xml:23:22-76
 uses-feature#0x00020000
 ADDED from [com.google.android.gms:play-services-maps:18.2.0] C:\Users\dhara\.gradle\caches\9.1.0\transforms\b5726a481e3e7856bed03e737b3d0e5e\workspace\transformed\jetified-play-services-maps-18.2.0\AndroidManifest.xml:26:5-28:35
 	android:glEsVersion

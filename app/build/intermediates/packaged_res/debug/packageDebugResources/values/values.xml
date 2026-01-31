@@ -5,10 +5,23 @@
     <color name="colorPrimary">#D32F2F</color>
     <color name="colorPrimaryDark">#B71C1C</color>
     <color name="white">#FFFFFF</color>
+    <string name="age_years">Age (years):</string>
     <string name="app_name">Emergency Alert</string>
+    <string name="battery_percent">Battery % Left:</string>
     <string name="call_emergency">Call Emergency</string>
+    <string name="distance_km">Distance (km):</string>
     <string name="emergency_mode">Emergency Mode</string>
+    <string name="invalid_numbers">Please enter valid numbers</string>
+    <string name="lat_1">Latitude 1:</string>
+    <string name="lat_2">Latitude 2:</string>
+    <string name="lon_1">Longitude 1:</string>
+    <string name="result_placeholder">Result will appear here</string>
     <string name="sos">SOS</string>
+    <string name="speed_kmh">Speed (km/h):</string>
+    <string name="speed_zero">Speed cannot be zero</string>
+    <string name="usage_rate">Usage Rate (%/hr):</string>
+    <string name="usage_zero">Usage rate cannot be zero</string>
+    <string name="weight_kg">Weight (kg):</string>
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <item name="colorPrimary">#D32F2F</item>
         <item name="colorPrimaryDark">#B71C1C</item>

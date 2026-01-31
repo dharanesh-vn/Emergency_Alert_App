@@ -18,6 +18,8 @@ import android.widget.ImageView;
 import android.widget.SeekBar;
 import android.widget.Toast;
 
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
@@ -32,88 +34,62 @@ import java.util.Locale;
 public class ImageEditorActivity extends AppCompatActivity {
 
     private ImageView imageView;
-    private Button btnCapture, btnGallery, btnCrop, btnResize, btnBrightness, btnBlur, btnSave;
-    private SeekBar seekBarEdit;
-
-    private Bitmap originalBitmap;
-    private Bitmap editedBitmap;
-    private Uri currentPhotoUri;
-
-    private static final int REQUEST_CAMERA = 101;
-    private static final int REQUEST_GALLERY = 102;
+    private SeekBar seekBar;
+    private Bitmap originalBitmap, editedBitmap;
+    private Uri imageUri;
 
     private enum EditMode { NONE, BRIGHTNESS, BLUR }
     private EditMode currentMode = EditMode.NONE;
+
+    private ActivityResultLauncher<Intent> cameraLauncher;
+    private ActivityResultLauncher<Intent> galleryLauncher;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_image_editor);
 
-        initializeViews();
-        setupListeners();
-        checkCameraPermission();
-    }
-
-    private void initializeViews() {
         imageView = findViewById(R.id.image_view);
-        btnCapture = findViewById(R.id.btn_capture);
-        btnGallery = findViewById(R.id.btn_gallery);
-        btnCrop = findViewById(R.id.btn_crop);
-        btnResize = findViewById(R.id.btn_resize);
-        btnBrightness = findViewById(R.id.btn_brightness);
-        btnBlur = findViewById(R.id.btn_blur);
-        btnSave = findViewById(R.id.btn_save);
-        seekBarEdit = findViewById(R.id.seekbar_edit);
+        seekBar = findViewById(R.id.seekbar_edit);
 
-        seekBarEdit.setMax(100);
-        seekBarEdit.setProgress(50); // neutral
-    }
+        Button btnCamera = findViewById(R.id.btn_capture);
+        Button btnGallery = findViewById(R.id.btn_gallery);
+        Button btnBrightness = findViewById(R.id.btn_brightness);
+        Button btnBlur = findViewById(R.id.btn_blur);
+        Button btnSave = findViewById(R.id.btn_save);
 
-    private void checkCameraPermission() {
-        if (ContextCompat.checkSelfPermission(this, Manifest.permission.CAMERA)
-                != PackageManager.PERMISSION_GRANTED) {
-            ActivityCompat.requestPermissions(this,
-                    new String[]{Manifest.permission.CAMERA}, REQUEST_CAMERA);
-        }
-    }
+        seekBar.setMax(100);
+        seekBar.setProgress(50);
 
-    private void setupListeners() {
+        setupActivityLaunchers();
 
-        btnCapture.setOnClickListener(v -> captureImage());
-        btnGallery.setOnClickListener(v -> selectFromGallery());
-
-        btnCrop.setOnClickListener(v -> cropImage());
-        btnResize.setOnClickListener(v -> resizeImage());
+        btnCamera.setOnClickListener(v -> openCamera());
+        btnGallery.setOnClickListener(v -> openGallery());
 
         btnBrightness.setOnClickListener(v -> {
             currentMode = EditMode.BRIGHTNESS;
-            Toast.makeText(this, "Use slider to adjust brightness (+ / -)", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Adjust brightness", Toast.LENGTH_SHORT).show();
         });
 
         btnBlur.setOnClickListener(v -> {
             currentMode = EditMode.BLUR;
-            Toast.makeText(this, "Use slider to adjust blur (+ / -)", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Adjust blur", Toast.LENGTH_SHORT).show();
         });
 
         btnSave.setOnClickListener(v -> saveImage());
 
-        seekBarEdit.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+        seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
                 if (originalBitmap == null) return;
 
-                int value = progress - 50; // -50 to +50
-
                 if (currentMode == EditMode.BRIGHTNESS) {
-                    editedBitmap = applyBrightness(originalBitmap, value);
+                    editedBitmap = applyBrightness(originalBitmap, progress - 50);
                 } else if (currentMode == EditMode.BLUR) {
                     editedBitmap = applyBlur(originalBitmap, Math.max(1, progress / 10));
                 }
 
-                if (editedBitmap != null) {
-                    imageView.setImageBitmap(editedBitmap);
-                }
+                imageView.setImageBitmap(editedBitmap);
             }
 
             @Override public void onStartTrackingTouch(SeekBar seekBar) {}
@@ -121,21 +97,65 @@ public class ImageEditorActivity extends AppCompatActivity {
         });
     }
 
-    private void captureImage() {
-        Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-        if (intent.resolveActivity(getPackageManager()) != null) {
-            File file = createImageFile();
-            currentPhotoUri = FileProvider.getUriForFile(
-                    this, "com.emergency.alert.fileprovider", file);
-            intent.putExtra(MediaStore.EXTRA_OUTPUT, currentPhotoUri);
-            startActivityForResult(intent, REQUEST_CAMERA);
-        }
+    private void setupActivityLaunchers() {
+
+        cameraLauncher = registerForActivityResult(
+                new ActivityResultContracts.StartActivityForResult(),
+                result -> {
+                    if (result.getResultCode() == RESULT_OK && imageUri != null) {
+                        loadBitmap(imageUri);
+                    }
+                });
+
+        galleryLauncher = registerForActivityResult(
+                new ActivityResultContracts.StartActivityForResult(),
+                result -> {
+                    if (result.getResultCode() == RESULT_OK && result.getData() != null) {
+                        loadBitmap(result.getData().getData());
+                    }
+                });
     }
 
-    private void selectFromGallery() {
-        startActivityForResult(
-                new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI),
-                REQUEST_GALLERY);
+    private void openCamera() {
+        if (!checkPermission(Manifest.permission.CAMERA)) return;
+
+        Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+        File file = createImageFile();
+        imageUri = FileProvider.getUriForFile(
+                this,
+                getPackageName() + ".fileprovider",
+                file
+        );
+        intent.putExtra(MediaStore.EXTRA_OUTPUT, imageUri);
+        cameraLauncher.launch(intent);
+    }
+
+    private void openGallery() {
+        galleryLauncher.launch(
+                new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI)
+        );
+    }
+
+    private boolean checkPermission(String permission) {
+        if (ContextCompat.checkSelfPermission(this, permission)
+                != PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(this, new String[]{permission}, 101);
+            return false;
+        }
+        return true;
+    }
+
+    private void loadBitmap(Uri uri) {
+        try {
+            originalBitmap = BitmapFactory.decodeStream(
+                    getContentResolver().openInputStream(uri)
+            );
+            editedBitmap = originalBitmap.copy(Bitmap.Config.ARGB_8888, true);
+            imageView.setImageBitmap(editedBitmap);
+            seekBar.setProgress(50);
+        } catch (Exception e) {
+            Toast.makeText(this, "Failed to load image", Toast.LENGTH_SHORT).show();
+        }
     }
 
     private File createImageFile() {
@@ -144,64 +164,26 @@ public class ImageEditorActivity extends AppCompatActivity {
                 "IMG_" + time + ".jpg");
     }
 
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-
-        try {
-            if (resultCode == RESULT_OK) {
-                Uri uri = (requestCode == REQUEST_CAMERA) ? currentPhotoUri : data.getData();
-                originalBitmap = BitmapFactory.decodeStream(getContentResolver().openInputStream(uri));
-                editedBitmap = originalBitmap.copy(Bitmap.Config.ARGB_8888, true);
-                imageView.setImageBitmap(editedBitmap);
-                seekBarEdit.setProgress(50);
-            }
-        } catch (Exception e) {
-            Toast.makeText(this, "Failed to load image", Toast.LENGTH_SHORT).show();
-        }
-    }
-
-    private void cropImage() {
-        if (originalBitmap == null) return;
-
-        int w = originalBitmap.getWidth();
-        int h = originalBitmap.getHeight();
-        editedBitmap = Bitmap.createBitmap(originalBitmap, w / 10, h / 10,
-                w * 8 / 10, h * 8 / 10);
-        imageView.setImageBitmap(editedBitmap);
-    }
-
-    private void resizeImage() {
-        if (originalBitmap == null) return;
-        editedBitmap = Bitmap.createScaledBitmap(
-                originalBitmap,
-                originalBitmap.getWidth() / 2,
-                originalBitmap.getHeight() / 2,
-                true);
-        imageView.setImageBitmap(editedBitmap);
-    }
-
-    private Bitmap applyBrightness(Bitmap bitmap, int value) {
-        ColorMatrix matrix = new ColorMatrix(new float[]{
+    private Bitmap applyBrightness(Bitmap bmp, int value) {
+        ColorMatrix cm = new ColorMatrix(new float[]{
                 1, 0, 0, 0, value,
                 0, 1, 0, 0, value,
                 0, 0, 1, 0, value,
                 0, 0, 0, 1, 0
         });
 
-        Bitmap out = Bitmap.createBitmap(bitmap.getWidth(), bitmap.getHeight(), bitmap.getConfig());
+        Bitmap out = Bitmap.createBitmap(bmp.getWidth(), bmp.getHeight(), bmp.getConfig());
         Canvas canvas = new Canvas(out);
         Paint paint = new Paint();
-        paint.setColorFilter(new ColorMatrixColorFilter(matrix));
-        canvas.drawBitmap(bitmap, 0, 0, paint);
+        paint.setColorFilter(new ColorMatrixColorFilter(cm));
+        canvas.drawBitmap(bmp, 0, 0, paint);
         return out;
     }
 
-    private Bitmap applyBlur(Bitmap bitmap, int scale) {
-        int w = bitmap.getWidth();
-        int h = bitmap.getHeight();
-        Bitmap small = Bitmap.createScaledBitmap(bitmap, w / scale, h / scale, false);
-        return Bitmap.createScaledBitmap(small, w, h, false);
+    private Bitmap applyBlur(Bitmap bmp, int scale) {
+        Bitmap small = Bitmap.createScaledBitmap(
+                bmp, bmp.getWidth() / scale, bmp.getHeight() / scale, false);
+        return Bitmap.createScaledBitmap(small, bmp.getWidth(), bmp.getHeight(), false);
     }
 
     private void saveImage() {

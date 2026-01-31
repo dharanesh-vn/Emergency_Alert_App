@@ -15,7 +15,7 @@ public class NotificationHelper {
     public static final String CHANNEL_ID = "EmergencyAlertChannel";
     private static final String CHANNEL_NAME = "Emergency Alerts";
 
-    // 🔹 Create notification channel (Android 8+)
+    // 🔹 Notification Channel (Android 8+)
     public static void createNotificationChannel(Context context) {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             NotificationChannel channel = new NotificationChannel(
@@ -32,7 +32,7 @@ public class NotificationHelper {
         }
     }
 
-    // 🔹 FOREGROUND notification (USED BY LocationTrackingService)
+    // 🔹 Foreground Service Notification
     public static Notification createForegroundNotification(Context context) {
 
         createNotificationChannel(context);
@@ -46,7 +46,7 @@ public class NotificationHelper {
         );
 
         return new NotificationCompat.Builder(context, CHANNEL_ID)
-                .setContentTitle("Emergency Alert Active")
+                .setContentTitle("Emergency Mode Active")
                 .setContentText("Location tracking is running")
                 .setSmallIcon(android.R.drawable.ic_menu_mylocation)
                 .setPriority(NotificationCompat.PRIORITY_HIGH)
@@ -55,7 +55,7 @@ public class NotificationHelper {
                 .build();
     }
 
-    // 🔹 Normal emergency notification (SOS / Geofence / Alerts)
+    // 🔹 Normal Emergency Notifications
     public static void showEmergencyNotification(
             Context context, String title, String message) {
 

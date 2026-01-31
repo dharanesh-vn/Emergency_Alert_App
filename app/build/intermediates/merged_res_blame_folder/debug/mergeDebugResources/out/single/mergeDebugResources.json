@@ -1,98 +1,106 @@
 [
     {
-        "merged": "com.emergency.alert.app-debug-34:/raw_siren.wav.flat",
-        "source": "com.emergency.alert.app-main-36:/raw/siren.wav"
+        "merged": "C:\\Users\\dhara\\.gradle\\daemon\\9.1.0\\com.emergency.alert.app-debug-34:\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "C:\\Users\\dhara\\.gradle\\daemon\\9.1.0\\com.emergency.alert.app-main-36:\\mipmap-anydpi-v26\\ic_launcher.xml"
+    },
+    {
+        "merged": "C:\\Users\\dhara\\.gradle\\daemon\\9.1.0\\com.emergency.alert.app-debug-34:\\layout_activity_main.xml.flat",
+        "source": "C:\\Users\\dhara\\.gradle\\daemon\\9.1.0\\com.emergency.alert.app-main-36:\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\dhara\\.gradle\\daemon\\9.1.0\\com.emergency.alert.app-debug-34:\\xml_file_paths.xml.flat",
+        "source": "C:\\Users\\dhara\\.gradle\\daemon\\9.1.0\\com.emergency.alert.app-main-36:\\xml\\file_paths.xml"
+    },
+    {
+        "merged": "C:\\Users\\dhara\\.gradle\\daemon\\9.1.0\\com.emergency.alert.app-debug-34:\\drawable_ic_launcher_background.xml.flat",
+        "source": "C:\\Users\\dhara\\.gradle\\daemon\\9.1.0\\com.emergency.alert.app-main-36:\\drawable\\ic_launcher_background.xml"
     },
     {
         "merged": "com.emergency.alert.app-debug-34:/layout_activity_main.xml.flat",
         "source": "com.emergency.alert.app-main-36:/layout/activity_main.xml"
     },
     {
-        "merged": "com.emergency.alert.app-debug-34:/layout_activity_login.xml.flat",
-        "source": "com.emergency.alert.app-main-36:/layout/activity_login.xml"
+        "merged": "C:\\Users\\dhara\\.gradle\\daemon\\9.1.0\\com.emergency.alert.app-debug-34:\\mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\dhara\\.gradle\\daemon\\9.1.0\\com.emergency.alert.app-main-36:\\mipmap-xhdpi\\ic_launcher.webp"
     },
     {
-        "merged": "com.emergency.alert.app-debug-34:/drawable_ic_launcher_foreground.xml.flat",
-        "source": "com.emergency.alert.app-main-36:/drawable/ic_launcher_foreground.xml"
+        "merged": "C:\\Users\\dhara\\.gradle\\daemon\\9.1.0\\com.emergency.alert.app-debug-34:\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\dhara\\.gradle\\daemon\\9.1.0\\com.emergency.alert.app-main-36:\\mipmap-xxhdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "com.emergency.alert.app-debug-34:/layout_activity_calculator.xml.flat",
-        "source": "com.emergency.alert.app-main-36:/layout/activity_calculator.xml"
+        "merged": "C:\\Users\\dhara\\.gradle\\daemon\\9.1.0\\com.emergency.alert.app-debug-34:\\layout_activity_webview.xml.flat",
+        "source": "C:\\Users\\dhara\\.gradle\\daemon\\9.1.0\\com.emergency.alert.app-main-36:\\layout\\activity_webview.xml"
     },
     {
-        "merged": "com.emergency.alert.app-debug-34:/mipmap-mdpi_ic_launcher_round.webp.flat",
-        "source": "com.emergency.alert.app-main-36:/mipmap-mdpi/ic_launcher_round.webp"
+        "merged": "C:\\Users\\dhara\\.gradle\\daemon\\9.1.0\\com.emergency.alert.app-debug-34:\\raw_siren.wav.flat",
+        "source": "C:\\Users\\dhara\\.gradle\\daemon\\9.1.0\\com.emergency.alert.app-main-36:\\raw\\siren.wav"
     },
     {
-        "merged": "com.emergency.alert.app-debug-34:/layout_activity_image_editor.xml.flat",
-        "source": "com.emergency.alert.app-main-36:/layout/activity_image_editor.xml"
+        "merged": "C:\\Users\\dhara\\.gradle\\daemon\\9.1.0\\com.emergency.alert.app-debug-34:\\mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\dhara\\.gradle\\daemon\\9.1.0\\com.emergency.alert.app-main-36:\\mipmap-mdpi\\ic_launcher.webp"
     },
     {
-        "merged": "com.emergency.alert.app-debug-34:/mipmap-xxxhdpi_ic_launcher.webp.flat",
-        "source": "com.emergency.alert.app-main-36:/mipmap-xxxhdpi/ic_launcher.webp"
+        "merged": "C:\\Users\\dhara\\.gradle\\daemon\\9.1.0\\com.emergency.alert.app-debug-34:\\layout_activity_emergency_contacts.xml.flat",
+        "source": "C:\\Users\\dhara\\.gradle\\daemon\\9.1.0\\com.emergency.alert.app-main-36:\\layout\\activity_emergency_contacts.xml"
     },
     {
-        "merged": "com.emergency.alert.app-debug-34:/layout_activity_emergency_contacts.xml.flat",
-        "source": "com.emergency.alert.app-main-36:/layout/activity_emergency_contacts.xml"
+        "merged": "C:\\Users\\dhara\\.gradle\\daemon\\9.1.0\\com.emergency.alert.app-debug-34:\\mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\dhara\\.gradle\\daemon\\9.1.0\\com.emergency.alert.app-main-36:\\mipmap-xxxhdpi\\ic_launcher.webp"
     },
     {
-        "merged": "com.emergency.alert.app-debug-34:/layout_activity_webview.xml.flat",
-        "source": "com.emergency.alert.app-main-36:/layout/activity_webview.xml"
+        "merged": "C:\\Users\\dhara\\.gradle\\daemon\\9.1.0\\com.emergency.alert.app-debug-34:\\layout_activity_image_editor.xml.flat",
+        "source": "C:\\Users\\dhara\\.gradle\\daemon\\9.1.0\\com.emergency.alert.app-main-36:\\layout\\activity_image_editor.xml"
     },
     {
-        "merged": "com.emergency.alert.app-debug-34:/mipmap-xxhdpi_ic_launcher.webp.flat",
-        "source": "com.emergency.alert.app-main-36:/mipmap-xxhdpi/ic_launcher.webp"
+        "merged": "C:\\Users\\dhara\\.gradle\\daemon\\9.1.0\\com.emergency.alert.app-debug-34:\\layout_activity_profile.xml.flat",
+        "source": "C:\\Users\\dhara\\.gradle\\daemon\\9.1.0\\com.emergency.alert.app-main-36:\\layout\\activity_profile.xml"
     },
     {
-        "merged": "com.emergency.alert.app-debug-34:/layout_activity_profile.xml.flat",
-        "source": "com.emergency.alert.app-main-36:/layout/activity_profile.xml"
+        "merged": "C:\\Users\\dhara\\.gradle\\daemon\\9.1.0\\com.emergency.alert.app-debug-34:\\layout_activity_login.xml.flat",
+        "source": "C:\\Users\\dhara\\.gradle\\daemon\\9.1.0\\com.emergency.alert.app-main-36:\\layout\\activity_login.xml"
     },
     {
-        "merged": "com.emergency.alert.app-debug-34:/drawable_ic_launcher_background.xml.flat",
-        "source": "com.emergency.alert.app-main-36:/drawable/ic_launcher_background.xml"
+        "merged": "C:\\Users\\dhara\\.gradle\\daemon\\9.1.0\\com.emergency.alert.app-debug-34:\\mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\dhara\\.gradle\\daemon\\9.1.0\\com.emergency.alert.app-main-36:\\mipmap-hdpi\\ic_launcher.webp"
     },
     {
-        "merged": "com.emergency.alert.app-debug-34:/mipmap-xxhdpi_ic_launcher_round.webp.flat",
-        "source": "com.emergency.alert.app-main-36:/mipmap-xxhdpi/ic_launcher_round.webp"
+        "merged": "C:\\Users\\dhara\\.gradle\\daemon\\9.1.0\\com.emergency.alert.app-debug-34:\\mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\dhara\\.gradle\\daemon\\9.1.0\\com.emergency.alert.app-main-36:\\mipmap-mdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "com.emergency.alert.app-debug-34:/mipmap-anydpi-v26_ic_launcher.xml.flat",
-        "source": "com.emergency.alert.app-main-36:/mipmap-anydpi-v26/ic_launcher.xml"
+        "merged": "C:\\Users\\dhara\\.gradle\\daemon\\9.1.0\\com.emergency.alert.app-debug-34:\\drawable_ic_launcher_foreground.xml.flat",
+        "source": "C:\\Users\\dhara\\.gradle\\daemon\\9.1.0\\com.emergency.alert.app-main-36:\\drawable\\ic_launcher_foreground.xml"
     },
     {
-        "merged": "com.emergency.alert.app-debug-34:/mipmap-hdpi_ic_launcher.webp.flat",
-        "source": "com.emergency.alert.app-main-36:/mipmap-hdpi/ic_launcher.webp"
+        "merged": "C:\\Users\\dhara\\.gradle\\daemon\\9.1.0\\com.emergency.alert.app-debug-34:\\layout_activity_safety_tips.xml.flat",
+        "source": "C:\\Users\\dhara\\.gradle\\daemon\\9.1.0\\com.emergency.alert.app-main-36:\\layout\\activity_safety_tips.xml"
     },
     {
-        "merged": "com.emergency.alert.app-debug-34:/xml_file_paths.xml.flat",
-        "source": "com.emergency.alert.app-main-36:/xml/file_paths.xml"
+        "merged": "com.emergency.alert.app-debug-34:/layout_activity_database_test.xml.flat",
+        "source": "com.emergency.alert.app-main-36:/layout/activity_database_test.xml"
     },
     {
-        "merged": "com.emergency.alert.app-debug-34:/mipmap-hdpi_ic_launcher_round.webp.flat",
-        "source": "com.emergency.alert.app-main-36:/mipmap-hdpi/ic_launcher_round.webp"
+        "merged": "C:\\Users\\dhara\\.gradle\\daemon\\9.1.0\\com.emergency.alert.app-debug-34:\\mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\dhara\\.gradle\\daemon\\9.1.0\\com.emergency.alert.app-main-36:\\mipmap-hdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "com.emergency.alert.app-debug-34:/mipmap-mdpi_ic_launcher.webp.flat",
-        "source": "com.emergency.alert.app-main-36:/mipmap-mdpi/ic_launcher.webp"
+        "merged": "C:\\Users\\dhara\\.gradle\\daemon\\9.1.0\\com.emergency.alert.app-debug-34:\\layout_activity_calculator.xml.flat",
+        "source": "C:\\Users\\dhara\\.gradle\\daemon\\9.1.0\\com.emergency.alert.app-main-36:\\layout\\activity_calculator.xml"
     },
     {
-        "merged": "com.emergency.alert.app-debug-34:/mipmap-xhdpi_ic_launcher_round.webp.flat",
-        "source": "com.emergency.alert.app-main-36:/mipmap-xhdpi/ic_launcher_round.webp"
+        "merged": "C:\\Users\\dhara\\.gradle\\daemon\\9.1.0\\com.emergency.alert.app-debug-34:\\mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\dhara\\.gradle\\daemon\\9.1.0\\com.emergency.alert.app-main-36:\\mipmap-xhdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "com.emergency.alert.app-debug-34:/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
-        "source": "com.emergency.alert.app-main-36:/mipmap-xxxhdpi/ic_launcher_round.webp"
+        "merged": "C:\\Users\\dhara\\.gradle\\daemon\\9.1.0\\com.emergency.alert.app-debug-34:\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\dhara\\.gradle\\daemon\\9.1.0\\com.emergency.alert.app-main-36:\\mipmap-xxxhdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "com.emergency.alert.app-debug-34:/mipmap-xhdpi_ic_launcher.webp.flat",
-        "source": "com.emergency.alert.app-main-36:/mipmap-xhdpi/ic_launcher.webp"
+        "merged": "C:\\Users\\dhara\\.gradle\\daemon\\9.1.0\\com.emergency.alert.app-debug-34:\\mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\dhara\\.gradle\\daemon\\9.1.0\\com.emergency.alert.app-main-36:\\mipmap-xxhdpi\\ic_launcher.webp"
     },
     {
-        "merged": "com.emergency.alert.app-debug-34:/layout_activity_safety_tips.xml.flat",
-        "source": "com.emergency.alert.app-main-36:/layout/activity_safety_tips.xml"
-    },
-    {
-        "merged": "com.emergency.alert.app-debug-34:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
-        "source": "com.emergency.alert.app-main-36:/mipmap-anydpi-v26/ic_launcher_round.xml"
+        "merged": "C:\\Users\\dhara\\.gradle\\daemon\\9.1.0\\com.emergency.alert.app-debug-34:\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "C:\\Users\\dhara\\.gradle\\daemon\\9.1.0\\com.emergency.alert.app-main-36:\\mipmap-anydpi-v26\\ic_launcher_round.xml"
     }
 ]

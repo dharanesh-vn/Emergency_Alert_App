@@ -2,101 +2,55 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.emergency.alert">
 
-    <!-- Permissions -->
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
-    <uses-permission android:name="android.permission.CALL_PHONE" />
-    <uses-permission android:name="android.permission.SEND_SMS" />
-    <uses-permission android:name="android.permission.CAMERA" />
-    <uses-permission android:name="android.permission.VIBRATE" />
-    <uses-permission android:name="android.permission.WAKE_LOCK" />
-    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
-    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-
-    <!-- Optional hardware features -->
-    <uses-feature
-        android:name="android.hardware.camera"
-        android:required="false" />
-    <uses-feature
-        android:name="android.hardware.location.gps"
-        android:required="false" />
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_LOCATION"/>
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <uses-permission android:name="android.permission.SEND_SMS"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
 
     <application
         android:allowBackup="true"
-        android:icon="@drawable/ic_launcher_foreground"
-        android:roundIcon="@drawable/ic_launcher_background"
         android:label="Emergency Alert"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
 
-        <!-- Main Activity -->
         <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
 
-        <!-- Login Activity -->
-        <activity
-            android:name=".LoginActivity"
-            android:exported="false" />
+        <activity android:name=".ProfileActivity"/>
+        <activity android:name=".EmergencyContactsActivity"/>
+        <activity android:name=".CalculatorActivity"/>
+        <activity android:name=".WebViewActivity"/>
+        <activity android:name=".ImageEditorActivity"/>
 
-        <!-- Profile Activity -->
-        <activity
-            android:name=".ProfileActivity"
-            android:exported="false" />
+        <!-- ✅ ADD THIS ONE LINE - Database Test Activity -->
+        <activity android:name=".DatabaseTestActivity"
+            android:label="Database Inspector"/>
 
-        <!-- Emergency Contacts Activity -->
-        <activity
-            android:name=".EmergencyContactsActivity"
-            android:exported="false" />
-
-        <!-- Safety Tips Activity -->
-        <activity
-            android:name=".SafetyTipsActivity"
-            android:exported="false" />
-
-        <!-- Calculator Activity -->
-        <activity
-            android:name=".CalculatorActivity"
-            android:exported="false" />
-
-        <!-- WebView Activity -->
-        <activity
-            android:name=".WebViewActivity"
-            android:exported="false" />
-
-        <!-- Image Editor Activity -->
-        <activity
-            android:name=".ImageEditorActivity"
-            android:exported="false" />
-
-        <!-- Location Tracking Service -->
         <service
             android:name=".LocationTrackingService"
-            android:enabled="true"
-            android:exported="false"
-            android:foregroundServiceType="location" />
+            android:foregroundServiceType="location"
+            android:exported="false"/>
 
-        <!-- Media Service -->
         <service
             android:name=".MediaService"
-            android:enabled="true"
-            android:exported="false" />
+            android:exported="false"/>
 
-        <!-- Geofence Receiver -->
         <receiver
             android:name=".GeofenceBroadcastReceiver"
-            android:enabled="true"
-            android:exported="false" />
+            android:exported="false"/>
 
-        <!-- File Provider -->
         <provider
             android:name="androidx.core.content.FileProvider"
             android:authorities="com.emergency.alert.fileprovider"
@@ -104,7 +58,7 @@
             android:grantUriPermissions="true">
             <meta-data
                 android:name="android.support.FILE_PROVIDER_PATHS"
-                android:resource="@xml/file_paths" />
+                android:resource="@xml/file_paths"/>
         </provider>
 
     </application>

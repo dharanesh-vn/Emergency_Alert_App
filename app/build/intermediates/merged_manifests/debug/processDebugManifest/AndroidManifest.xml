@@ -61,14 +61,16 @@
         <activity android:name="com.emergency.alert.CalculatorActivity" />
         <activity android:name="com.emergency.alert.WebViewActivity" />
         <activity android:name="com.emergency.alert.ImageEditorActivity" />
-
-        <!-- ✅ ADD THESE TWO LINES -->
         <activity
             android:name="com.emergency.alert.SafetyTipsActivity"
             android:label="Safety Tips" />
         <activity
             android:name="com.emergency.alert.DatabaseTestActivity"
             android:label="Database Inspector" />
+        <!-- NEW: Location Activity -->
+        <activity
+            android:name="com.emergency.alert.LocationActivity"
+            android:label="My Location" />
 
         <service
             android:name="com.emergency.alert.LocationTrackingService"

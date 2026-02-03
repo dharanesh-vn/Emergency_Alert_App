@@ -33,12 +33,13 @@
         <activity android:name=".CalculatorActivity"/>
         <activity android:name=".WebViewActivity"/>
         <activity android:name=".ImageEditorActivity"/>
-
-        <!-- ✅ ADD THESE TWO LINES -->
         <activity android:name=".SafetyTipsActivity"
             android:label="Safety Tips"/>
         <activity android:name=".DatabaseTestActivity"
             android:label="Database Inspector"/>
+        <!-- NEW: Location Activity -->
+        <activity android:name=".LocationActivity"
+            android:label="My Location"/>
 
         <service
             android:name=".LocationTrackingService"

@@ -1,146 +1,320 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#F5F5F5">
 
     <LinearLayout
         android:id="@+id/main_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="16dp">
+        android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/tv_welcome"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Welcome, User!"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            android:layout_marginBottom="8dp" />
-
-        <TextView
-            android:id="@+id/tv_status"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Status: Normal"
-            android:textSize="16sp"
-            android:layout_marginBottom="24dp" />
-
-        <Button
-            android:id="@+id/btn_emergency_mode"
-            android:layout_width="match_parent"
-            android:layout_height="80dp"
-            android:text="ACTIVATE EMERGENCY MODE"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            android:textColor="#FFFFFF"
-            android:backgroundTint="#D32F2F"
-            android:layout_marginBottom="16dp" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Quick Emergency Actions"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            android:layout_marginBottom="8dp" />
-
+        <!-- Header Section -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginBottom="16dp">
+            android:background="#D32F2F"
+            android:orientation="vertical"
+            android:padding="24dp"
+            android:elevation="4dp">
 
-            <Button
-                android:id="@+id/btn_sos"
-                android:layout_width="0dp"
+            <TextView
+                android:id="@+id/tv_welcome"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="SOS"
+                android:text="@string/welcome_user"
+                android:textSize="28sp"
+                android:textStyle="bold"
                 android:textColor="#FFFFFF"
-                android:backgroundTint="#FF5252"
-                android:layout_marginEnd="8dp" />
+                android:layout_marginBottom="8dp" />
 
-            <Button
-                android:id="@+id/btn_call_emergency"
-                android:layout_width="0dp"
+            <TextView
+                android:id="@+id/tv_status"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Call Emergency"
-                android:textColor="#FFFFFF"
-                android:backgroundTint="#FF6E40" />
-
+                android:text="@string/status_normal"
+                android:textSize="16sp"
+                android:textColor="#E3F2FD" />
         </LinearLayout>
 
-        <Button
-            android:id="@+id/btn_safety_tips"
+        <!-- Main Content -->
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="View Safety Tips"
-            android:backgroundTint="#4CAF50"
-            android:textColor="#FFFFFF"
-            android:layout_marginBottom="24dp" />
+            android:orientation="vertical"
+            android:padding="16dp">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Features"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            android:layout_marginBottom="8dp" />
+            <!-- Emergency Mode Button -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="8dp">
 
-        <Button
-            android:id="@+id/btn_profile"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Profile &amp; Theme Settings"
-            android:layout_marginBottom="8dp" />
+                <Button
+                    android:id="@+id/btn_emergency_mode"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:text="@string/activate_emergency"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="#FFFFFF"
+                    android:backgroundTint="#D32F2F" />
+            </com.google.android.material.card.MaterialCardView>
 
-        <Button
-            android:id="@+id/btn_contacts"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Emergency Contacts"
-            android:layout_marginBottom="8dp" />
+            <!-- Quick Emergency Actions Section -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/quick_actions"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#212121"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="12dp" />
 
-        <Button
-            android:id="@+id/btn_location"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Start Location Tracking"
-            android:layout_marginBottom="8dp" />
+            <!-- SOS and Call Emergency Row -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="12dp">
 
-        <Button
-            android:id="@+id/btn_calculator"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Emergency Calculators"
-            android:layout_marginBottom="8dp" />
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="8dp"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="4dp">
 
-        <Button
-            android:id="@+id/btn_web_info"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Emergency Information Online"
-            android:layout_marginBottom="8dp" />
+                    <Button
+                        android:id="@+id/btn_sos"
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:text="@string/sos"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textColor="#FFFFFF"
+                        android:backgroundTint="#FF5252" />
+                </com.google.android.material.card.MaterialCardView>
 
-        <Button
-            android:id="@+id/btn_image_editor"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Emergency Image Capture &amp; Edit"
-            android:layout_marginBottom="8dp" />
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="4dp">
 
-        <!-- ✅ ADDED - Database Test Button -->
-        <Button
-            android:id="@+id/btn_database_test"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="🔍 View Database"
-            android:backgroundTint="#2196F3"
-            android:textColor="#FFFFFF"
-            android:layout_marginBottom="8dp" />
+                    <Button
+                        android:id="@+id/btn_call_emergency"
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:text="@string/call_emergency"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:textColor="#FFFFFF"
+                        android:backgroundTint="#FF6E40" />
+                </com.google.android.material.card.MaterialCardView>
+            </LinearLayout>
+
+            <!-- Safety Tips Button -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="4dp">
+
+                <Button
+                    android:id="@+id/btn_safety_tips"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:text="@string/view_safety_tips"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:backgroundTint="#4CAF50"
+                    android:textColor="#FFFFFF" />
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Features Section -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/features"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#212121"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="12dp" />
+
+            <!-- Feature Buttons Grid -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="2dp"
+                app:cardBackgroundColor="#FFFFFF">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <!-- Row 1: Profile & Contacts -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btn_profile"
+                            android:layout_width="0dp"
+                            android:layout_height="56dp"
+                            android:layout_weight="1"
+                            android:layout_margin="4dp"
+                            android:text="@string/profile"
+                            android:textSize="14sp"
+                            app:backgroundTint="#9C27B0"
+                            android:textColor="#FFFFFF"
+                            app:cornerRadius="8dp" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btn_contacts"
+                            android:layout_width="0dp"
+                            android:layout_height="56dp"
+                            android:layout_weight="1"
+                            android:layout_margin="4dp"
+                            android:text="@string/contacts"
+                            android:textSize="14sp"
+                            app:backgroundTint="#E91E63"
+                            android:textColor="#FFFFFF"
+                            app:cornerRadius="8dp" />
+                    </LinearLayout>
+
+                    <!-- Row 2: Location & Tracking -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btn_view_location"
+                            android:layout_width="0dp"
+                            android:layout_height="56dp"
+                            android:layout_weight="1"
+                            android:layout_margin="4dp"
+                            android:text="@string/location"
+                            android:textSize="14sp"
+                            app:backgroundTint="#2196F3"
+                            android:textColor="#FFFFFF"
+                            app:cornerRadius="8dp" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btn_location"
+                            android:layout_width="0dp"
+                            android:layout_height="56dp"
+                            android:layout_weight="1"
+                            android:layout_margin="4dp"
+                            android:text="@string/tracking"
+                            android:textSize="14sp"
+                            app:backgroundTint="#03A9F4"
+                            android:textColor="#FFFFFF"
+                            app:cornerRadius="8dp" />
+                    </LinearLayout>
+
+                    <!-- Row 3: Calculator & Web Info -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btn_calculator"
+                            android:layout_width="0dp"
+                            android:layout_height="56dp"
+                            android:layout_weight="1"
+                            android:layout_margin="4dp"
+                            android:text="@string/calculator"
+                            android:textSize="14sp"
+                            app:backgroundTint="#FF9800"
+                            android:textColor="#FFFFFF"
+                            app:cornerRadius="8dp" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btn_web_info"
+                            android:layout_width="0dp"
+                            android:layout_height="56dp"
+                            android:layout_weight="1"
+                            android:layout_margin="4dp"
+                            android:text="@string/web_info"
+                            android:textSize="14sp"
+                            app:backgroundTint="#FF5722"
+                            android:textColor="#FFFFFF"
+                            app:cornerRadius="8dp" />
+                    </LinearLayout>
+
+                    <!-- Row 4: Image Editor -->
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_image_editor"
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        android:layout_margin="4dp"
+                        android:text="@string/image_capture"
+                        android:textSize="14sp"
+                        app:backgroundTint="#795548"
+                        android:textColor="#FFFFFF"
+                        app:cornerRadius="8dp" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Developer Tools Section -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/developer_tools"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#212121"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="12dp" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="4dp">
+
+                <Button
+                    android:id="@+id/btn_database_test"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:text="@string/database_inspector"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:backgroundTint="#1E88E5"
+                    android:textColor="#FFFFFF" />
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Footer Info -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/app_version"
+                android:textSize="12sp"
+                android:textColor="#757575"
+                android:gravity="center"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:padding="12dp" />
+
+        </LinearLayout>
 
     </LinearLayout>
 </ScrollView>

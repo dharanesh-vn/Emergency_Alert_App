@@ -1,15 +1,16 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:2:1-68:12
-INJECTED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:2:1-68:12
-INJECTED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:2:1-68:12
-INJECTED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:2:1-68:12
-MERGED from [com.google.android.material:material:1.10.0] C:\Users\dhara\.gradle\caches\9.1.0\transforms\7f741756021789ecda6b7da9b624af23\workspace\transformed\material-1.10.0\AndroidManifest.xml:17:1-24:12
+ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:2:1-69:12
+INJECTED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:2:1-69:12
+INJECTED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:2:1-69:12
+INJECTED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:2:1-69:12
+MERGED from [com.google.android.material:material:1.11.0] C:\Users\dhara\.gradle\caches\9.1.0\transforms\74291f73b7223973dbe4f60990c10cba\workspace\transformed\material-1.11.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\dhara\.gradle\caches\9.1.0\transforms\8c733786075954d23b40c9961d674455\workspace\transformed\constraintlayout-2.1.4\AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.appcompat:appcompat-resources:1.6.1] C:\Users\dhara\.gradle\caches\9.1.0\transforms\ffea51a0f1c65c064625cba14ca0df4a\workspace\transformed\jetified-appcompat-resources-1.6.1\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.appcompat:appcompat:1.6.1] C:\Users\dhara\.gradle\caches\9.1.0\transforms\9661b0ba661a170c3bd79b5ef59efda8\workspace\transformed\appcompat-1.6.1\AndroidManifest.xml:17:1-22:12
-MERGED from [com.google.android.gms:play-services-location:21.0.1] C:\Users\dhara\.gradle\caches\9.1.0\transforms\d9cd5882d2afd89c7a9d1130aaad5f8e\workspace\transformed\jetified-play-services-location-21.0.1\AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-location:21.1.0] C:\Users\dhara\.gradle\caches\9.1.0\transforms\6a8bd1bf9dbd901980b246002d537382\workspace\transformed\jetified-play-services-location-21.1.0\AndroidManifest.xml:2:1-9:12
 MERGED from [com.google.android.gms:play-services-maps:18.2.0] C:\Users\dhara\.gradle\caches\9.1.0\transforms\b5726a481e3e7856bed03e737b3d0e5e\workspace\transformed\jetified-play-services-maps-18.2.0\AndroidManifest.xml:17:1-44:12
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\dhara\.gradle\caches\9.1.0\transforms\0deba87df5117021dbb33fbea0e032eb\workspace\transformed\cardview-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\dhara\.gradle\caches\9.1.0\transforms\85219e6aacb20a752901b53cde10ef20\workspace\transformed\jetified-viewpager2-1.0.0\AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.android.gms:play-services-base:18.1.0] C:\Users\dhara\.gradle\caches\9.1.0\transforms\8174df9cdcf9a5676edae327067cbb8b\workspace\transformed\jetified-play-services-base-18.1.0\AndroidManifest.xml:16:1-24:12
 MERGED from [com.google.android.gms:play-services-tasks:18.0.2] C:\Users\dhara\.gradle\caches\9.1.0\transforms\f92b4b98d2444ba7dfea8d3d0b3763c5\workspace\transformed\jetified-play-services-tasks-18.0.2\AndroidManifest.xml:2:1-6:12
@@ -39,7 +40,6 @@ MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\dhara\.gradle\ca
 MERGED from [androidx.customview:customview:1.1.0] C:\Users\dhara\.gradle\caches\9.1.0\transforms\e76818b0a24b2a4a4a04ab491a650634\workspace\transformed\customview-1.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.core:core:1.9.0] C:\Users\dhara\.gradle\caches\9.1.0\transforms\066c12c00859d02386bf97d2cf6432de\workspace\transformed\core-1.9.0\AndroidManifest.xml:17:1-30:12
 MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\dhara\.gradle\caches\9.1.0\transforms\37590401797ef0632b4dd45b36063ab9\workspace\transformed\cursoradapter-1.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\dhara\.gradle\caches\9.1.0\transforms\0deba87df5117021dbb33fbea0e032eb\workspace\transformed\cardview-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\dhara\.gradle\caches\9.1.0\transforms\41f53fd9d5071e7446530b5e7674ea83\workspace\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:17:1-27:12
 MERGED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\dhara\.gradle\caches\9.1.0\transforms\c2b1c181493b2d43f31db17f1956c070\workspace\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:17:1-55:12
 MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\dhara\.gradle\caches\9.1.0\transforms\411d60c3fbf3259e39e7610666599a2d\workspace\transformed\jetified-startup-runtime-1.1.1\AndroidManifest.xml:17:1-33:12
@@ -102,14 +102,14 @@ ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManife
 	android:name
 		ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:14:22-74
 application
-ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:16:5-66:19
-INJECTED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:16:5-66:19
-MERGED from [com.google.android.material:material:1.10.0] C:\Users\dhara\.gradle\caches\9.1.0\transforms\7f741756021789ecda6b7da9b624af23\workspace\transformed\material-1.10.0\AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.material:material:1.10.0] C:\Users\dhara\.gradle\caches\9.1.0\transforms\7f741756021789ecda6b7da9b624af23\workspace\transformed\material-1.10.0\AndroidManifest.xml:22:5-20
+ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:16:5-67:19
+INJECTED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:16:5-67:19
+MERGED from [com.google.android.material:material:1.11.0] C:\Users\dhara\.gradle\caches\9.1.0\transforms\74291f73b7223973dbe4f60990c10cba\workspace\transformed\material-1.11.0\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.material:material:1.11.0] C:\Users\dhara\.gradle\caches\9.1.0\transforms\74291f73b7223973dbe4f60990c10cba\workspace\transformed\material-1.11.0\AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\dhara\.gradle\caches\9.1.0\transforms\8c733786075954d23b40c9961d674455\workspace\transformed\constraintlayout-2.1.4\AndroidManifest.xml:9:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\dhara\.gradle\caches\9.1.0\transforms\8c733786075954d23b40c9961d674455\workspace\transformed\constraintlayout-2.1.4\AndroidManifest.xml:9:5-20
-MERGED from [com.google.android.gms:play-services-location:21.0.1] C:\Users\dhara\.gradle\caches\9.1.0\transforms\d9cd5882d2afd89c7a9d1130aaad5f8e\workspace\transformed\jetified-play-services-location-21.0.1\AndroidManifest.xml:7:5-20
-MERGED from [com.google.android.gms:play-services-location:21.0.1] C:\Users\dhara\.gradle\caches\9.1.0\transforms\d9cd5882d2afd89c7a9d1130aaad5f8e\workspace\transformed\jetified-play-services-location-21.0.1\AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-location:21.1.0] C:\Users\dhara\.gradle\caches\9.1.0\transforms\6a8bd1bf9dbd901980b246002d537382\workspace\transformed\jetified-play-services-location-21.1.0\AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-location:21.1.0] C:\Users\dhara\.gradle\caches\9.1.0\transforms\6a8bd1bf9dbd901980b246002d537382\workspace\transformed\jetified-play-services-location-21.1.0\AndroidManifest.xml:7:5-20
 MERGED from [com.google.android.gms:play-services-maps:18.2.0] C:\Users\dhara\.gradle\caches\9.1.0\transforms\b5726a481e3e7856bed03e737b3d0e5e\workspace\transformed\jetified-play-services-maps-18.2.0\AndroidManifest.xml:36:5-42:19
 MERGED from [com.google.android.gms:play-services-maps:18.2.0] C:\Users\dhara\.gradle\caches\9.1.0\transforms\b5726a481e3e7856bed03e737b3d0e5e\workspace\transformed\jetified-play-services-maps-18.2.0\AndroidManifest.xml:36:5-42:19
 MERGED from [com.google.android.gms:play-services-base:18.1.0] C:\Users\dhara\.gradle\caches\9.1.0\transforms\8174df9cdcf9a5676edae327067cbb8b\workspace\transformed\jetified-play-services-base-18.1.0\AndroidManifest.xml:19:5-23:19
@@ -179,69 +179,77 @@ ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManife
 	android:name
 		ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:35:19-54
 activity#com.emergency.alert.SafetyTipsActivity
-ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:38:9-39:42
+ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:36:9-37:42
 	android:label
-		ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:39:13-40
+		ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:37:13-40
 	android:name
-		ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:38:19-53
+		ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:36:19-53
 activity#com.emergency.alert.DatabaseTestActivity
-ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:40:9-41:49
+ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:38:9-39:49
 	android:label
-		ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:41:13-47
+		ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:39:13-47
 	android:name
-		ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:40:19-55
+		ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:38:19-55
+activity#com.emergency.alert.LocationActivity
+ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:41:9-42:42
+	android:label
+		ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:42:13-40
+	android:name
+		ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:41:19-51
 service#com.emergency.alert.LocationTrackingService
-ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:43:9-46:39
+ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:44:9-47:39
 	android:exported
-		ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:46:13-37
+		ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:47:13-37
 	android:foregroundServiceType
-		ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:45:13-53
+		ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:46:13-53
 	android:name
-		ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:44:13-52
+		ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:45:13-52
 service#com.emergency.alert.MediaService
-ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:48:9-50:39
+ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:49:9-51:39
 	android:exported
-		ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:50:13-37
+		ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:51:13-37
 	android:name
-		ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:49:13-41
+		ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:50:13-41
 receiver#com.emergency.alert.GeofenceBroadcastReceiver
-ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:52:9-54:39
+ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:53:9-55:39
 	android:exported
-		ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:54:13-37
+		ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:55:13-37
 	android:name
-		ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:53:13-54
+		ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:54:13-54
 provider#androidx.core.content.FileProvider
-ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:56:9-64:20
+ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:57:9-65:20
 	android:grantUriPermissions
-		ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:60:13-47
+		ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:61:13-47
 	android:authorities
-		ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:58:13-67
+		ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:59:13-67
 	android:exported
-		ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:59:13-37
+		ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:60:13-37
 	android:name
-		ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:57:13-62
+		ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:58:13-62
 meta-data#android.support.FILE_PROVIDER_PATHS
-ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:61:13-63:53
+ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:62:13-64:53
 	android:resource
-		ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:63:17-51
+		ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:64:17-51
 	android:name
-		ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:62:17-67
+		ADDED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml:63:17-67
 uses-sdk
 INJECTED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml
 INJECTED from C:\Users\dhara\Downloads\EmergencyAlertApp\app\src\main\AndroidManifest.xml
-MERGED from [com.google.android.material:material:1.10.0] C:\Users\dhara\.gradle\caches\9.1.0\transforms\7f741756021789ecda6b7da9b624af23\workspace\transformed\material-1.10.0\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.material:material:1.10.0] C:\Users\dhara\.gradle\caches\9.1.0\transforms\7f741756021789ecda6b7da9b624af23\workspace\transformed\material-1.10.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.material:material:1.11.0] C:\Users\dhara\.gradle\caches\9.1.0\transforms\74291f73b7223973dbe4f60990c10cba\workspace\transformed\material-1.11.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.material:material:1.11.0] C:\Users\dhara\.gradle\caches\9.1.0\transforms\74291f73b7223973dbe4f60990c10cba\workspace\transformed\material-1.11.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\dhara\.gradle\caches\9.1.0\transforms\8c733786075954d23b40c9961d674455\workspace\transformed\constraintlayout-2.1.4\AndroidManifest.xml:5:5-7:41
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\dhara\.gradle\caches\9.1.0\transforms\8c733786075954d23b40c9961d674455\workspace\transformed\constraintlayout-2.1.4\AndroidManifest.xml:5:5-7:41
 MERGED from [androidx.appcompat:appcompat-resources:1.6.1] C:\Users\dhara\.gradle\caches\9.1.0\transforms\ffea51a0f1c65c064625cba14ca0df4a\workspace\transformed\jetified-appcompat-resources-1.6.1\AndroidManifest.xml:20:5-44
 MERGED from [androidx.appcompat:appcompat-resources:1.6.1] C:\Users\dhara\.gradle\caches\9.1.0\transforms\ffea51a0f1c65c064625cba14ca0df4a\workspace\transformed\jetified-appcompat-resources-1.6.1\AndroidManifest.xml:20:5-44
 MERGED from [androidx.appcompat:appcompat:1.6.1] C:\Users\dhara\.gradle\caches\9.1.0\transforms\9661b0ba661a170c3bd79b5ef59efda8\workspace\transformed\appcompat-1.6.1\AndroidManifest.xml:20:5-44
 MERGED from [androidx.appcompat:appcompat:1.6.1] C:\Users\dhara\.gradle\caches\9.1.0\transforms\9661b0ba661a170c3bd79b5ef59efda8\workspace\transformed\appcompat-1.6.1\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-location:21.0.1] C:\Users\dhara\.gradle\caches\9.1.0\transforms\d9cd5882d2afd89c7a9d1130aaad5f8e\workspace\transformed\jetified-play-services-location-21.0.1\AndroidManifest.xml:5:5-44
-MERGED from [com.google.android.gms:play-services-location:21.0.1] C:\Users\dhara\.gradle\caches\9.1.0\transforms\d9cd5882d2afd89c7a9d1130aaad5f8e\workspace\transformed\jetified-play-services-location-21.0.1\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-location:21.1.0] C:\Users\dhara\.gradle\caches\9.1.0\transforms\6a8bd1bf9dbd901980b246002d537382\workspace\transformed\jetified-play-services-location-21.1.0\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-location:21.1.0] C:\Users\dhara\.gradle\caches\9.1.0\transforms\6a8bd1bf9dbd901980b246002d537382\workspace\transformed\jetified-play-services-location-21.1.0\AndroidManifest.xml:5:5-44
 MERGED from [com.google.android.gms:play-services-maps:18.2.0] C:\Users\dhara\.gradle\caches\9.1.0\transforms\b5726a481e3e7856bed03e737b3d0e5e\workspace\transformed\jetified-play-services-maps-18.2.0\AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-maps:18.2.0] C:\Users\dhara\.gradle\caches\9.1.0\transforms\b5726a481e3e7856bed03e737b3d0e5e\workspace\transformed\jetified-play-services-maps-18.2.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\dhara\.gradle\caches\9.1.0\transforms\0deba87df5117021dbb33fbea0e032eb\workspace\transformed\cardview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\dhara\.gradle\caches\9.1.0\transforms\0deba87df5117021dbb33fbea0e032eb\workspace\transformed\cardview-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\dhara\.gradle\caches\9.1.0\transforms\85219e6aacb20a752901b53cde10ef20\workspace\transformed\jetified-viewpager2-1.0.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\dhara\.gradle\caches\9.1.0\transforms\85219e6aacb20a752901b53cde10ef20\workspace\transformed\jetified-viewpager2-1.0.0\AndroidManifest.xml:20:5-22:41
 MERGED from [com.google.android.gms:play-services-base:18.1.0] C:\Users\dhara\.gradle\caches\9.1.0\transforms\8174df9cdcf9a5676edae327067cbb8b\workspace\transformed\jetified-play-services-base-18.1.0\AndroidManifest.xml:18:5-43
@@ -300,8 +308,6 @@ MERGED from [androidx.core:core:1.9.0] C:\Users\dhara\.gradle\caches\9.1.0\trans
 MERGED from [androidx.core:core:1.9.0] C:\Users\dhara\.gradle\caches\9.1.0\transforms\066c12c00859d02386bf97d2cf6432de\workspace\transformed\core-1.9.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\dhara\.gradle\caches\9.1.0\transforms\37590401797ef0632b4dd45b36063ab9\workspace\transformed\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\dhara\.gradle\caches\9.1.0\transforms\37590401797ef0632b4dd45b36063ab9\workspace\transformed\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\dhara\.gradle\caches\9.1.0\transforms\0deba87df5117021dbb33fbea0e032eb\workspace\transformed\cardview-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\dhara\.gradle\caches\9.1.0\transforms\0deba87df5117021dbb33fbea0e032eb\workspace\transformed\cardview-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\dhara\.gradle\caches\9.1.0\transforms\41f53fd9d5071e7446530b5e7674ea83\workspace\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\dhara\.gradle\caches\9.1.0\transforms\41f53fd9d5071e7446530b5e7674ea83\workspace\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\dhara\.gradle\caches\9.1.0\transforms\c2b1c181493b2d43f31db17f1956c070\workspace\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:21:5-44

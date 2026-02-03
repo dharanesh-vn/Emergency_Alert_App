@@ -1,27 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <!-- App -->
     <string name="app_name">Emergency Alert</string>
+
+    <!-- Main Screen -->
+    <string name="welcome_user">Welcome, User!</string>
+    <string name="status_normal">Status: Normal</string>
+    <string name="status_emergency">EMERGENCY MODE ACTIVE</string>
+    <string name="activate_emergency">ACTIVATE EMERGENCY MODE</string>
+    <string name="quick_actions">Quick Emergency Actions</string>
+    <string name="features">Features</string>
+    <string name="developer_tools">Developer Tools</string>
+    <string name="app_version">Emergency Alert System v1.0</string>
 
     <!-- Main buttons -->
     <string name="emergency_mode">Emergency Mode</string>
     <string name="sos">SOS</string>
-    <string name="call_emergency">Call Emergency</string>
+    <string name="call_emergency">Call 112</string>
+    <string name="view_safety_tips">View Safety Tips</string>
+    <string name="profile">Profile</string>
+    <string name="contacts">Contacts</string>
+    <string name="location">Location</string>
+    <string name="tracking">Tracking</string>
+    <string name="calculator">Calculator</string>
+    <string name="web_info">Web Info</string>
+    <string name="image_capture">Image Capture</string>
+    <string name="database_inspector">Database Inspector</string>
 
     <!-- Calculator -->
     <string name="result_placeholder">Result will appear here</string>
-
     <string name="lat_1">Latitude 1:</string>
     <string name="lon_1">Longitude 1:</string>
     <string name="lat_2">Latitude 2:</string>
-
+    <string name="lon_2">Longitude 2:</string>
     <string name="distance_km">Distance (km):</string>
     <string name="speed_kmh">Speed (km/h):</string>
-
     <string name="age_years">Age (years):</string>
     <string name="weight_kg">Weight (kg):</string>
-
     <string name="battery_percent">Battery % Left:</string>
     <string name="usage_rate">Usage Rate (%/hr):</string>
 
@@ -29,5 +44,28 @@
     <string name="invalid_numbers">Please enter valid numbers</string>
     <string name="speed_zero">Speed cannot be zero</string>
     <string name="usage_zero">Usage rate cannot be zero</string>
+    <string name="fill_all_fields">Please fill all fields</string>
+    <string name="contact_saved">Contact saved</string>
+    <string name="contact_deleted">Contact deleted</string>
 
+    <!-- Location -->
+    <string name="view_share_location">View and Share Location</string>
+    <string name="start_location_tracking">Start Location Tracking</string>
+    <string name="my_location">My Location</string>
+    <string name="refresh_location">Refresh Location</string>
+    <string name="copy_location">Copy</string>
+    <string name="open_maps">Open Maps</string>
+    <string name="share_to_contacts">Share with Emergency Contacts</string>
+
+    <!-- Safety Tips -->
+    <string name="safety_tips">Safety Tips</string>
+
+    <!-- Contact Management -->
+    <string name="add_contact">Add Contact</string>
+    <string name="contact_name">Contact Name</string>
+    <string name="contact_phone">Phone Number</string>
+    <string name="contact_relation">Relation</string>
+    <string name="save">Save</string>
+    <string name="delete">Delete</string>
+    <string name="call">Call</string>
 </resources>

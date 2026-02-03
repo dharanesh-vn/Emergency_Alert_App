@@ -10,7 +10,7 @@ com.emergency.alert.app-lifecycle-runtime-2.6.1-8 C:\Users\dhara\.gradle\caches\
 com.emergency.alert.app-jetified-emoji2-views-helper-1.2.0-9 C:\Users\dhara\.gradle\caches\9.1.0\transforms\4bb4d66617e7a0f556d697dd9f2d761d\workspace\transformed\jetified-emoji2-views-helper-1.2.0\res
 com.emergency.alert.app-core-runtime-2.2.0-10 C:\Users\dhara\.gradle\caches\9.1.0\transforms\51371cba4d04eb655632d2be886f2bb7\workspace\transformed\core-runtime-2.2.0\res
 com.emergency.alert.app-jetified-core-ktx-1.9.0-11 C:\Users\dhara\.gradle\caches\9.1.0\transforms\6056762eaa36fa6e1c0ff0681d18fee0\workspace\transformed\jetified-core-ktx-1.9.0\res
-com.emergency.alert.app-material-1.10.0-12 C:\Users\dhara\.gradle\caches\9.1.0\transforms\7f741756021789ecda6b7da9b624af23\workspace\transformed\material-1.10.0\res
+com.emergency.alert.app-material-1.11.0-12 C:\Users\dhara\.gradle\caches\9.1.0\transforms\74291f73b7223973dbe4f60990c10cba\workspace\transformed\material-1.11.0\res
 com.emergency.alert.app-jetified-play-services-base-18.1.0-13 C:\Users\dhara\.gradle\caches\9.1.0\transforms\8174df9cdcf9a5676edae327067cbb8b\workspace\transformed\jetified-play-services-base-18.1.0\res
 com.emergency.alert.app-jetified-lifecycle-process-2.6.1-14 C:\Users\dhara\.gradle\caches\9.1.0\transforms\81f28284e83fd14ffad73994df85338f\workspace\transformed\jetified-lifecycle-process-2.6.1\res
 com.emergency.alert.app-lifecycle-viewmodel-2.6.1-15 C:\Users\dhara\.gradle\caches\9.1.0\transforms\82d375ed56d029b57a8a867c412592f2\workspace\transformed\lifecycle-viewmodel-2.6.1\res

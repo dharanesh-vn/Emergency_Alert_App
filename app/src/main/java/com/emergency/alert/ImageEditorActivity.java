@@ -1,17 +1,12 @@
 package com.emergency.alert;
 
 import android.Manifest;
+import android.content.ContentValues;
 import android.content.Intent;
 import android.content.pm.PackageManager;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.graphics.Canvas;
-import android.graphics.ColorMatrix;
-import android.graphics.ColorMatrixColorFilter;
-import android.graphics.Paint;
+import android.graphics.*;
 import android.net.Uri;
 import android.os.Bundle;
-import android.os.Environment;
 import android.provider.MediaStore;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -23,10 +18,8 @@ import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
-import androidx.core.content.FileProvider;
 
-import java.io.File;
-import java.io.FileOutputStream;
+import java.io.OutputStream;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
@@ -35,14 +28,16 @@ public class ImageEditorActivity extends AppCompatActivity {
 
     private ImageView imageView;
     private SeekBar seekBar;
-    private Bitmap originalBitmap, editedBitmap;
-    private Uri imageUri;
+
+    private Bitmap originalBitmap;
+    private Bitmap editedBitmap;
+    private Uri savedImageUri;
 
     private enum EditMode { NONE, BRIGHTNESS, BLUR }
     private EditMode currentMode = EditMode.NONE;
 
-    private ActivityResultLauncher<Intent> cameraLauncher;
-    private ActivityResultLauncher<Intent> galleryLauncher;
+    private ActivityResultLauncher<Void> cameraLauncher;
+    private ActivityResultLauncher<String> galleryLauncher;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,26 +52,28 @@ public class ImageEditorActivity extends AppCompatActivity {
         Button btnBrightness = findViewById(R.id.btn_brightness);
         Button btnBlur = findViewById(R.id.btn_blur);
         Button btnSave = findViewById(R.id.btn_save);
+        Button btnShare = findViewById(R.id.btn_share);
 
         seekBar.setMax(100);
         seekBar.setProgress(50);
 
-        setupActivityLaunchers();
+        setupLaunchers();
 
         btnCamera.setOnClickListener(v -> openCamera());
         btnGallery.setOnClickListener(v -> openGallery());
 
         btnBrightness.setOnClickListener(v -> {
             currentMode = EditMode.BRIGHTNESS;
-            Toast.makeText(this, "Adjust brightness", Toast.LENGTH_SHORT).show();
+            seekBar.setVisibility(SeekBar.VISIBLE);
         });
 
         btnBlur.setOnClickListener(v -> {
             currentMode = EditMode.BLUR;
-            Toast.makeText(this, "Adjust blur", Toast.LENGTH_SHORT).show();
+            seekBar.setVisibility(SeekBar.VISIBLE);
         });
 
-        btnSave.setOnClickListener(v -> saveImage());
+        btnSave.setOnClickListener(v -> saveToGallery());
+        btnShare.setOnClickListener(v -> shareImage());
 
         seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
@@ -97,85 +94,84 @@ public class ImageEditorActivity extends AppCompatActivity {
         });
     }
 
-    private void setupActivityLaunchers() {
+    private void setupLaunchers() {
 
         cameraLauncher = registerForActivityResult(
-                new ActivityResultContracts.StartActivityForResult(),
-                result -> {
-                    if (result.getResultCode() == RESULT_OK && imageUri != null) {
-                        loadBitmap(imageUri);
+                new ActivityResultContracts.TakePicturePreview(),
+                bitmap -> {
+                    if (bitmap != null) {
+                        originalBitmap = addTimestampWatermark(bitmap);
+                        editedBitmap = originalBitmap.copy(Bitmap.Config.ARGB_8888, true);
+                        imageView.setImageBitmap(editedBitmap);
                     }
                 });
 
         galleryLauncher = registerForActivityResult(
-                new ActivityResultContracts.StartActivityForResult(),
-                result -> {
-                    if (result.getResultCode() == RESULT_OK && result.getData() != null) {
-                        loadBitmap(result.getData().getData());
+                new ActivityResultContracts.GetContent(),
+                uri -> {
+                    try {
+                        Bitmap bmp = BitmapFactory.decodeStream(
+                                getContentResolver().openInputStream(uri));
+                        originalBitmap = addTimestampWatermark(bmp);
+                        editedBitmap = originalBitmap.copy(Bitmap.Config.ARGB_8888, true);
+                        imageView.setImageBitmap(editedBitmap);
+                    } catch (Exception e) {
+                        Toast.makeText(this, "Unable to load image", Toast.LENGTH_SHORT).show();
                     }
                 });
     }
 
     private void openCamera() {
-        if (!checkPermission(Manifest.permission.CAMERA)) return;
-
-        Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-        File file = createImageFile();
-        imageUri = FileProvider.getUriForFile(
-                this,
-                getPackageName() + ".fileprovider",
-                file
-        );
-        intent.putExtra(MediaStore.EXTRA_OUTPUT, imageUri);
-        cameraLauncher.launch(intent);
+        if (checkPermission(Manifest.permission.CAMERA)) {
+            cameraLauncher.launch(null);
+        }
     }
 
     private void openGallery() {
-        galleryLauncher.launch(
-                new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI)
-        );
+        galleryLauncher.launch("image/*");
     }
 
     private boolean checkPermission(String permission) {
         if (ContextCompat.checkSelfPermission(this, permission)
                 != PackageManager.PERMISSION_GRANTED) {
-            ActivityCompat.requestPermissions(this, new String[]{permission}, 101);
+            ActivityCompat.requestPermissions(this, new String[]{permission}, 301);
             return false;
         }
         return true;
     }
 
-    private void loadBitmap(Uri uri) {
-        try {
-            originalBitmap = BitmapFactory.decodeStream(
-                    getContentResolver().openInputStream(uri)
-            );
-            editedBitmap = originalBitmap.copy(Bitmap.Config.ARGB_8888, true);
-            imageView.setImageBitmap(editedBitmap);
-            seekBar.setProgress(50);
-        } catch (Exception e) {
-            Toast.makeText(this, "Failed to load image", Toast.LENGTH_SHORT).show();
-        }
-    }
+    private Bitmap addTimestampWatermark(Bitmap bitmap) {
+        Bitmap result = bitmap.copy(Bitmap.Config.ARGB_8888, true);
+        Canvas canvas = new Canvas(result);
 
-    private File createImageFile() {
-        String time = new SimpleDateFormat("yyyyMMdd_HHmmss", Locale.getDefault()).format(new Date());
-        return new File(getExternalFilesDir(Environment.DIRECTORY_PICTURES),
-                "IMG_" + time + ".jpg");
+        Paint paint = new Paint(Paint.ANTI_ALIAS_FLAG);
+        paint.setColor(Color.WHITE);
+        paint.setTextSize(28f);
+        paint.setShadowLayer(1f, 1f, 1f, Color.BLACK);
+
+        String timestamp = new SimpleDateFormat(
+                "yyyy-MM-dd HH:mm", Locale.getDefault()).format(new Date());
+
+        float x = result.getWidth() - paint.measureText(timestamp) - 20;
+        float y = result.getHeight() - 20;
+
+        canvas.drawText(timestamp, x, y, paint);
+        return result;
     }
 
     private Bitmap applyBrightness(Bitmap bmp, int value) {
-        ColorMatrix cm = new ColorMatrix(new float[]{
+        ColorMatrix matrix = new ColorMatrix(new float[]{
                 1, 0, 0, 0, value,
                 0, 1, 0, 0, value,
                 0, 0, 1, 0, value,
                 0, 0, 0, 1, 0
         });
 
-        Bitmap out = Bitmap.createBitmap(bmp.getWidth(), bmp.getHeight(), bmp.getConfig());
+        Bitmap out = Bitmap.createBitmap(
+                bmp.getWidth(), bmp.getHeight(), bmp.getConfig());
         Canvas canvas = new Canvas(out);
         Paint paint = new Paint();
-        paint.setColorFilter(new ColorMatrixColorFilter(cm));
+        paint.setColorFilter(new ColorMatrixColorFilter(matrix));
         canvas.drawBitmap(bmp, 0, 0, paint);
         return out;
     }
@@ -183,20 +179,45 @@ public class ImageEditorActivity extends AppCompatActivity {
     private Bitmap applyBlur(Bitmap bmp, int scale) {
         Bitmap small = Bitmap.createScaledBitmap(
                 bmp, bmp.getWidth() / scale, bmp.getHeight() / scale, false);
-        return Bitmap.createScaledBitmap(small, bmp.getWidth(), bmp.getHeight(), false);
+        return Bitmap.createScaledBitmap(
+                small, bmp.getWidth(), bmp.getHeight(), false);
     }
 
-    private void saveImage() {
+    private void saveToGallery() {
         if (editedBitmap == null) return;
 
         try {
-            File file = createImageFile();
-            FileOutputStream fos = new FileOutputStream(file);
-            editedBitmap.compress(Bitmap.CompressFormat.JPEG, 90, fos);
-            fos.close();
-            Toast.makeText(this, "Saved: " + file.getName(), Toast.LENGTH_LONG).show();
+            ContentValues values = new ContentValues();
+            values.put(MediaStore.Images.Media.DISPLAY_NAME,
+                    "Evidence_" + System.currentTimeMillis() + ".jpg");
+            values.put(MediaStore.Images.Media.MIME_TYPE, "image/jpeg");
+            values.put(MediaStore.Images.Media.RELATIVE_PATH,
+                    "Pictures/EmergencyAlert");
+
+            savedImageUri = getContentResolver().insert(
+                    MediaStore.Images.Media.EXTERNAL_CONTENT_URI, values);
+
+            OutputStream out = getContentResolver().openOutputStream(savedImageUri);
+            editedBitmap.compress(Bitmap.CompressFormat.JPEG, 95, out);
+            out.close();
+
+            Toast.makeText(this, "Image saved to gallery", Toast.LENGTH_LONG).show();
         } catch (Exception e) {
             Toast.makeText(this, "Save failed", Toast.LENGTH_SHORT).show();
         }
+    }
+
+    private void shareImage() {
+        if (savedImageUri == null) {
+            Toast.makeText(this, "Save image before sharing", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        Intent shareIntent = new Intent(Intent.ACTION_SEND);
+        shareIntent.setType("image/jpeg");
+        shareIntent.putExtra(Intent.EXTRA_STREAM, savedImageUri);
+        shareIntent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
+
+        startActivity(Intent.createChooser(shareIntent, "Share evidence using"));
     }
 }

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -9,7 +10,7 @@
         android:id="@+id/tv_username"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Profile: User"
+        android:text="@string/profile"
         android:textSize="24sp"
         android:textStyle="bold"
         android:layout_marginBottom="24dp" />
@@ -17,7 +18,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Theme Customization"
+        android:text="@string/theme_customization"
         android:textSize="18sp"
         android:textStyle="bold"
         android:layout_marginBottom="16dp" />
@@ -25,7 +26,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Background Color (Hex):"
+        android:text="@string/background_color"
         android:layout_marginBottom="8dp" />
 
     <EditText
@@ -34,13 +35,12 @@
         android:layout_height="wrap_content"
         android:hint="#FFFFFF"
         android:inputType="text"
-        android:padding="12dp"
         android:layout_marginBottom="16dp" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Font Size:"
+        android:text="@string/font_size"
         android:layout_marginBottom="8dp" />
 
     <SeekBar
@@ -48,8 +48,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:max="30"
-        android:progress="6"
-        android:layout_marginBottom="8dp" />
+        android:progress="6" />
 
     <TextView
         android:id="@+id/tv_font_size_value"
@@ -62,17 +61,13 @@
         android:id="@+id/btn_save_theme"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Save Theme"
-        android:backgroundTint="#4CAF50"
-        android:textColor="#FFFFFF"
+        android:text="@string/save"
         android:layout_marginBottom="16dp" />
 
     <Button
         android:id="@+id/btn_logout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Logout"
-        android:backgroundTint="#F44336"
-        android:textColor="#FFFFFF" />
+        android:text="@string/logout" />
 
 </LinearLayout>

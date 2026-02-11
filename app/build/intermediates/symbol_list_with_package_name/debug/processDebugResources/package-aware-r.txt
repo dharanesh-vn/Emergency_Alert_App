@@ -3269,7 +3269,6 @@ id btn_call_emergency
 id btn_capture
 id btn_contacts
 id btn_copy_location
-id btn_crop
 id btn_database_test
 id btn_disaster_alerts
 id btn_emergency_guidelines
@@ -3284,10 +3283,10 @@ id btn_police
 id btn_profile
 id btn_refresh_location
 id btn_register
-id btn_resize
 id btn_safety_tips
 id btn_save
 id btn_save_theme
+id btn_share
 id btn_share_to_contacts
 id btn_sos
 id btn_view_location
@@ -3579,6 +3578,7 @@ id right
 id rightToLeft
 id right_icon
 id right_side
+id root_layout
 id rounded
 id row_index_key
 id satellite
@@ -3970,6 +3970,7 @@ string androidx_startup
 string app_name
 string app_version
 string appbar_scrolling_view_behavior
+string background_color
 string battery_percent
 string bottom_sheet_behavior
 string bottomsheet_action_collapse
@@ -3984,6 +3985,9 @@ string character_counter_content_description
 string character_counter_overflowed_content_description
 string character_counter_pattern
 string clear_text_end_icon_content_description
+string color_blue
+string color_green
+string color_red
 string common_google_play_services_enable_button
 string common_google_play_services_enable_text
 string common_google_play_services_enable_title
@@ -4021,6 +4025,8 @@ string fab_transformation_scrim_behavior
 string fab_transformation_sheet_behavior
 string features
 string fill_all_fields
+string font_size
+string font_size_value
 string hide_bottom_view_on_scroll_behavior
 string icon_content_description
 string image_capture
@@ -4028,7 +4034,9 @@ string invalid_numbers
 string item_view_role_description
 string lat_1
 string lat_2
+string live_preview
 string location
+string logout
 string lon_1
 string lon_2
 string m3_exceed_max_badge_text_suffix
@@ -4139,11 +4147,14 @@ string path_password_eye_mask_strike_through
 string path_password_eye_mask_visible
 string path_password_strike_through
 string profile
+string profile_title
 string quick_actions
 string refresh_location
 string result_placeholder
 string safety_tips
+string sample_text
 string save
+string save_theme
 string search_menu_title
 string searchbar_scrolling_view_behavior
 string searchview_clear_text_content_description
@@ -4158,6 +4169,7 @@ string start_location_tracking
 string status_bar_notification_info_overflow
 string status_emergency
 string status_normal
+string theme_customization
 string tracking
 string usage_rate
 string usage_zero

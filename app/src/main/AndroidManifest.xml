@@ -2,20 +2,45 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.emergency.alert">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
-    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION"/>
-    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
-    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_LOCATION"/>
-    <uses-permission android:name="android.permission.CALL_PHONE"/>
-    <uses-permission android:name="android.permission.SEND_SMS"/>
-    <uses-permission android:name="android.permission.CAMERA"/>
-    <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
+    <!-- ================= Permissions ================= -->
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_LOCATION" />
+
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
+    <!-- ================= Hardware Declarations ================= -->
+
+    <!-- Telephony is OPTIONAL (fixes your error) -->
+    <uses-feature
+        android:name="android.hardware.telephony"
+        android:required="false" />
+
+    <!-- Camera is OPTIONAL -->
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+
+    <uses-feature
+        android:name="android.hardware.camera.autofocus"
+        android:required="false" />
+
+    <!-- ================= Application ================= -->
 
     <application
         android:allowBackup="true"
-        android:label="Emergency Alert"
+        android:label="@string/app_name"
+        android:icon="@mipmap/ic_launcher"
+        android:roundIcon="@mipmap/ic_launcher_round"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
 
@@ -23,36 +48,41 @@
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-                <category android:name="android.intent.category.LAUNCHER"/>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
 
-        <activity android:name=".ProfileActivity"/>
-        <activity android:name=".EmergencyContactsActivity"/>
-        <activity android:name=".CalculatorActivity"/>
-        <activity android:name=".WebViewActivity"/>
-        <activity android:name=".ImageEditorActivity"/>
+        <activity android:name=".ProfileActivity" />
+        <activity android:name=".EmergencyContactsActivity" />
+        <activity android:name=".CalculatorActivity" />
+        <activity android:name=".WebViewActivity" />
+        <activity android:name=".ImageEditorActivity" />
         <activity android:name=".SafetyTipsActivity"
-            android:label="Safety Tips"/>
+            android:label="Safety Tips" />
         <activity android:name=".DatabaseTestActivity"
-            android:label="Database Inspector"/>
-        <!-- NEW: Location Activity -->
+            android:label="Database Inspector" />
         <activity android:name=".LocationActivity"
-            android:label="My Location"/>
+            android:label="My Location" />
+
+        <!-- ================= Services ================= -->
 
         <service
             android:name=".LocationTrackingService"
             android:foregroundServiceType="location"
-            android:exported="false"/>
+            android:exported="false" />
 
         <service
             android:name=".MediaService"
-            android:exported="false"/>
+            android:exported="false" />
+
+        <!-- ================= Receivers ================= -->
 
         <receiver
             android:name=".GeofenceBroadcastReceiver"
-            android:exported="false"/>
+            android:exported="false" />
+
+        <!-- ================= File Provider ================= -->
 
         <provider
             android:name="androidx.core.content.FileProvider"
@@ -61,7 +91,7 @@
             android:grantUriPermissions="true">
             <meta-data
                 android:name="android.support.FILE_PROVIDER_PATHS"
-                android:resource="@xml/file_paths"/>
+                android:resource="@xml/file_paths" />
         </provider>
 
     </application>

@@ -10,6 +10,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import java.util.List;
 
 public class DatabaseTestActivity extends AppCompatActivity {
+
     private DatabaseHelper dbHelper;
     private TextView tvResults;
     private Button btnRefresh, btnAddTestData;
@@ -25,100 +26,87 @@ public class DatabaseTestActivity extends AppCompatActivity {
         btnRefresh = findViewById(R.id.btnRefresh);
         btnAddTestData = findViewById(R.id.btnAddTestData);
 
-        btnRefresh.setOnClickListener(v -> showDatabaseInfo());
-        btnAddTestData.setOnClickListener(v -> addTestData());
+        btnRefresh.setOnClickListener(v -> displayDatabaseStatus());
+        btnAddTestData.setOnClickListener(v -> insertTestData());
 
-        // Show data immediately
-        showDatabaseInfo();
+        displayDatabaseStatus();
     }
 
-    private void showDatabaseInfo() {
-        StringBuilder result = new StringBuilder();
-        result.append("═══════════════════════════════════\n");
-        result.append("     DATABASE INSPECTION\n");
-        result.append("═══════════════════════════════════\n\n");
+    private void displayDatabaseStatus() {
 
-        // Database Location
-        result.append("📂 DATABASE FILE:\n");
-        result.append("/data/data/com.emergency.alert/databases/\n");
-        result.append("EmergencyAlert.db\n\n");
+        StringBuilder sb = new StringBuilder();
+
+        sb.append("DATABASE STATUS\n");
+        sb.append("================================\n");
+        sb.append("Database Name : EmergencyAlert.db\n");
+        sb.append("Package       : com.emergency.alert\n\n");
 
         // Safety Tips
-        result.append("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n");
-        result.append("💡 SAFETY TIPS\n");
-        result.append("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n");
         List<DatabaseHelper.SafetyTip> tips = dbHelper.getAllSafetyTips();
-        result.append("Total: ").append(tips.size()).append(" tips\n\n");
+        sb.append("SAFETY TIPS TABLE\n");
+        sb.append("Records: ").append(tips.size()).append("\n\n");
 
         for (DatabaseHelper.SafetyTip tip : tips) {
-            result.append("• ").append(tip.title).append("\n");
-            result.append("  Category: ").append(tip.category).append("\n");
-            result.append("  ID: ").append(tip.id).append("\n\n");
+            sb.append("ID       : ").append(tip.id).append("\n");
+            sb.append("Title    : ").append(tip.title).append("\n");
+            sb.append("Category : ").append(tip.category).append("\n\n");
         }
 
-        // Emergency Contacts
-        result.append("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n");
-        result.append("📞 EMERGENCY CONTACTS\n");
-        result.append("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n");
-        List<DatabaseHelper.EmergencyContact> contacts = dbHelper.getAllEmergencyContacts();
-        result.append("Total: ").append(contacts.size()).append(" contacts\n\n");
+        // Contacts
+        List<DatabaseHelper.EmergencyContact> contacts =
+                dbHelper.getAllEmergencyContacts();
 
-        if (contacts.isEmpty()) {
-            result.append("(No contacts added yet)\n\n");
-        } else {
-            for (DatabaseHelper.EmergencyContact contact : contacts) {
-                result.append("• ").append(contact.name).append("\n");
-                result.append("  Phone: ").append(contact.phone).append("\n");
-                result.append("  Relation: ").append(contact.relation).append("\n");
-                result.append("  ID: ").append(contact.id).append("\n\n");
-            }
+        sb.append("--------------------------------\n");
+        sb.append("EMERGENCY CONTACTS TABLE\n");
+        sb.append("Records: ").append(contacts.size()).append("\n\n");
+
+        for (DatabaseHelper.EmergencyContact c : contacts) {
+            sb.append("ID       : ").append(c.id).append("\n");
+            sb.append("Name     : ").append(c.name).append("\n");
+            sb.append("Phone    : ").append(c.phone).append("\n");
+            sb.append("Relation : ").append(c.relation).append("\n\n");
         }
 
-        // Emergency Events
-        result.append("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n");
-        result.append("🚨 EMERGENCY EVENTS\n");
-        result.append("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n");
-        List<DatabaseHelper.EmergencyEvent> events = dbHelper.getAllEmergencyEvents();
-        result.append("Total: ").append(events.size()).append(" events\n\n");
+        // Events
+        List<DatabaseHelper.EmergencyEvent> events =
+                dbHelper.getAllEmergencyEvents();
 
-        if (events.isEmpty()) {
-            result.append("(No events logged yet)\n\n");
-        } else {
-            for (DatabaseHelper.EmergencyEvent event : events) {
-                result.append("• ").append(event.eventType).append("\n");
-                result.append("  Date: ").append(event.eventDate).append("\n");
-                result.append("  Location: ").append(event.location).append("\n");
-                result.append("  ID: ").append(event.id).append("\n\n");
-            }
+        sb.append("--------------------------------\n");
+        sb.append("EMERGENCY EVENTS TABLE\n");
+        sb.append("Records: ").append(events.size()).append("\n\n");
+
+        for (DatabaseHelper.EmergencyEvent e : events) {
+            sb.append("ID       : ").append(e.id).append("\n");
+            sb.append("Type     : ").append(e.eventType).append("\n");
+            sb.append("Date     : ").append(e.eventDate).append("\n");
+            sb.append("Location : ").append(e.location).append("\n\n");
         }
 
-        result.append("═══════════════════════════════════\n");
-        result.append("✅ DATABASE CONNECTED & WORKING!\n");
-        result.append("═══════════════════════════════════\n");
+        sb.append("================================\n");
+        sb.append("DATABASE CONNECTION: OK\n");
 
-        tvResults.setText(result.toString());
+        tvResults.setText(sb.toString());
     }
 
-    private void addTestData() {
-        // Add test contact
+    private void insertTestData() {
+
         long contactId = dbHelper.addEmergencyContact(
-                "Test Contact",
-                "9876543210",
-                "Friend"
+                "Database Test",
+                "9999999999",
+                "Test User"
         );
 
-        // Add test event
         long eventId = dbHelper.addEmergencyEvent(
-                "Test Emergency",
-                "Test Location",
-                "Test notes"
+                "Test Event",
+                "Unknown",
+                "Test record insertion"
         );
 
         Toast.makeText(this,
-                "Test data added!\nContact ID: " + contactId + "\nEvent ID: " + eventId,
+                "Test records inserted\nContact ID: " + contactId +
+                        "\nEvent ID: " + eventId,
                 Toast.LENGTH_LONG).show();
 
-        // Refresh display
-        showDatabaseInfo();
+        displayDatabaseStatus();
     }
 }

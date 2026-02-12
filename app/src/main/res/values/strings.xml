@@ -2,7 +2,7 @@
 <resources>
 
     <!-- App -->
-    <string name="app_name">Emergency Alert</string>
+    <string name="app_name">ResQ</string>
 
     <!-- Main Screen -->
     <string name="welcome_user">Welcome, User!</string>

@@ -1,5 +1,9 @@
 [
     {
+        "merged": "com.emergency.alert.app-debug-34:/mipmap-hdpi_ic_launcher_foreground.webp.flat",
+        "source": "com.emergency.alert.app-main-36:/mipmap-hdpi/ic_launcher_foreground.webp"
+    },
+    {
         "merged": "C:\\Users\\dhara\\.gradle\\daemon\\9.1.0\\com.emergency.alert.app-debug-34:\\mipmap-anydpi-v26_ic_launcher.xml.flat",
         "source": "C:\\Users\\dhara\\.gradle\\daemon\\9.1.0\\com.emergency.alert.app-main-36:\\mipmap-anydpi-v26\\ic_launcher.xml"
     },
@@ -20,6 +24,10 @@
         "source": "C:\\Users\\dhara\\.gradle\\daemon\\9.1.0\\com.emergency.alert.app-main-36:\\mipmap-xhdpi\\ic_launcher.webp"
     },
     {
+        "merged": "com.emergency.alert.app-debug-34:/mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "com.emergency.alert.app-main-36:/mipmap-mdpi/ic_launcher_round.webp"
+    },
+    {
         "merged": "C:\\Users\\dhara\\.gradle\\daemon\\9.1.0\\com.emergency.alert.app-debug-34:\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
         "source": "C:\\Users\\dhara\\.gradle\\daemon\\9.1.0\\com.emergency.alert.app-main-36:\\mipmap-xxhdpi\\ic_launcher_round.webp"
     },
@@ -28,12 +36,20 @@
         "source": "C:\\Users\\dhara\\.gradle\\daemon\\9.1.0\\com.emergency.alert.app-main-36:\\layout\\activity_database_test.xml"
     },
     {
-        "merged": "com.emergency.alert.app-debug-34:/layout_activity_image_editor.xml.flat",
-        "source": "com.emergency.alert.app-main-36:/layout/activity_image_editor.xml"
+        "merged": "com.emergency.alert.app-debug-34:/mipmap-xxxhdpi_ic_launcher_foreground.webp.flat",
+        "source": "com.emergency.alert.app-main-36:/mipmap-xxxhdpi/ic_launcher_foreground.webp"
+    },
+    {
+        "merged": "com.emergency.alert.app-debug-34:/mipmap-mdpi_ic_launcher_foreground.webp.flat",
+        "source": "com.emergency.alert.app-main-36:/mipmap-mdpi/ic_launcher_foreground.webp"
     },
     {
         "merged": "C:\\Users\\dhara\\.gradle\\daemon\\9.1.0\\com.emergency.alert.app-debug-34:\\layout_activity_webview.xml.flat",
         "source": "C:\\Users\\dhara\\.gradle\\daemon\\9.1.0\\com.emergency.alert.app-main-36:\\layout\\activity_webview.xml"
+    },
+    {
+        "merged": "com.emergency.alert.app-debug-34:/mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "com.emergency.alert.app-main-36:/mipmap-xxxhdpi/ic_launcher.webp"
     },
     {
         "merged": "C:\\Users\\dhara\\.gradle\\daemon\\9.1.0\\com.emergency.alert.app-debug-34:\\raw_siren.wav.flat",
@@ -42,6 +58,10 @@
     {
         "merged": "C:\\Users\\dhara\\.gradle\\daemon\\9.1.0\\com.emergency.alert.app-debug-34:\\mipmap-mdpi_ic_launcher.webp.flat",
         "source": "C:\\Users\\dhara\\.gradle\\daemon\\9.1.0\\com.emergency.alert.app-main-36:\\mipmap-mdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "com.emergency.alert.app-debug-34:/mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "com.emergency.alert.app-main-36:/mipmap-xxhdpi/ic_launcher.webp"
     },
     {
         "merged": "C:\\Users\\dhara\\.gradle\\daemon\\9.1.0\\com.emergency.alert.app-debug-34:\\layout_activity_emergency_contacts.xml.flat",
@@ -64,12 +84,20 @@
         "source": "C:\\Users\\dhara\\.gradle\\daemon\\9.1.0\\com.emergency.alert.app-main-36:\\layout\\activity_profile.xml"
     },
     {
+        "merged": "com.emergency.alert.app-debug-34:/mipmap-xhdpi_ic_launcher_foreground.webp.flat",
+        "source": "com.emergency.alert.app-main-36:/mipmap-xhdpi/ic_launcher_foreground.webp"
+    },
+    {
         "merged": "C:\\Users\\dhara\\.gradle\\daemon\\9.1.0\\com.emergency.alert.app-debug-34:\\drawable_header_gradient.xml.flat",
         "source": "C:\\Users\\dhara\\.gradle\\daemon\\9.1.0\\com.emergency.alert.app-main-36:\\drawable\\header_gradient.xml"
     },
     {
         "merged": "C:\\Users\\dhara\\.gradle\\daemon\\9.1.0\\com.emergency.alert.app-debug-34:\\mipmap-hdpi_ic_launcher.webp.flat",
         "source": "C:\\Users\\dhara\\.gradle\\daemon\\9.1.0\\com.emergency.alert.app-main-36:\\mipmap-hdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "com.emergency.alert.app-debug-34:/mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.emergency.alert.app-main-36:/mipmap-xxhdpi/ic_launcher_round.webp"
     },
     {
         "merged": "C:\\Users\\dhara\\.gradle\\daemon\\9.1.0\\com.emergency.alert.app-debug-34:\\mipmap-mdpi_ic_launcher_round.webp.flat",
@@ -84,12 +112,36 @@
         "source": "C:\\Users\\dhara\\.gradle\\daemon\\9.1.0\\com.emergency.alert.app-main-36:\\layout\\activity_safety_tips.xml"
     },
     {
+        "merged": "com.emergency.alert.app-debug-34:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "com.emergency.alert.app-main-36:/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "com.emergency.alert.app-debug-34:/mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "com.emergency.alert.app-main-36:/mipmap-hdpi/ic_launcher.webp"
+    },
+    {
         "merged": "C:\\Users\\dhara\\.gradle\\daemon\\9.1.0\\com.emergency.alert.app-debug-34:\\mipmap-hdpi_ic_launcher_round.webp.flat",
         "source": "C:\\Users\\dhara\\.gradle\\daemon\\9.1.0\\com.emergency.alert.app-main-36:\\mipmap-hdpi\\ic_launcher_round.webp"
     },
     {
+        "merged": "com.emergency.alert.app-debug-34:/mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "com.emergency.alert.app-main-36:/mipmap-hdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.emergency.alert.app-debug-34:/mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "com.emergency.alert.app-main-36:/mipmap-mdpi/ic_launcher.webp"
+    },
+    {
         "merged": "C:\\Users\\dhara\\.gradle\\daemon\\9.1.0\\com.emergency.alert.app-debug-34:\\layout_activity_calculator.xml.flat",
         "source": "C:\\Users\\dhara\\.gradle\\daemon\\9.1.0\\com.emergency.alert.app-main-36:\\layout\\activity_calculator.xml"
+    },
+    {
+        "merged": "com.emergency.alert.app-debug-34:/mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "com.emergency.alert.app-main-36:/mipmap-xhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.emergency.alert.app-debug-34:/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.emergency.alert.app-main-36:/mipmap-xxxhdpi/ic_launcher_round.webp"
     },
     {
         "merged": "C:\\Users\\dhara\\.gradle\\daemon\\9.1.0\\com.emergency.alert.app-debug-34:\\layout_activity_location.xml.flat",
@@ -100,8 +152,20 @@
         "source": "C:\\Users\\dhara\\.gradle\\daemon\\9.1.0\\com.emergency.alert.app-main-36:\\mipmap-xhdpi\\ic_launcher_round.webp"
     },
     {
+        "merged": "com.emergency.alert.app-debug-34:/mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "com.emergency.alert.app-main-36:/mipmap-xhdpi/ic_launcher.webp"
+    },
+    {
         "merged": "C:\\Users\\dhara\\.gradle\\daemon\\9.1.0\\com.emergency.alert.app-debug-34:\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
         "source": "C:\\Users\\dhara\\.gradle\\daemon\\9.1.0\\com.emergency.alert.app-main-36:\\mipmap-xxxhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.emergency.alert.app-debug-34:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "com.emergency.alert.app-main-36:/mipmap-anydpi-v26/ic_launcher_round.xml"
+    },
+    {
+        "merged": "com.emergency.alert.app-debug-34:/mipmap-xxhdpi_ic_launcher_foreground.webp.flat",
+        "source": "com.emergency.alert.app-main-36:/mipmap-xxhdpi/ic_launcher_foreground.webp"
     },
     {
         "merged": "C:\\Users\\dhara\\.gradle\\daemon\\9.1.0\\com.emergency.alert.app-debug-34:\\mipmap-xxhdpi_ic_launcher.webp.flat",

@@ -110,6 +110,7 @@ layout activity_profile
 layout activity_safety_tips
 layout activity_webview
 mipmap ic_launcher
+mipmap ic_launcher_foreground
 mipmap ic_launcher_round
 raw siren
 string activate_emergency
